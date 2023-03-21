@@ -152,42 +152,25 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-<<<<<<< HEAD
-          <LineNumber>11</LineNumber>
+          <LineNumber>53</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>0</Address>
-=======
-          <LineNumber>13</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134218962</Address>
->>>>>>> main
+          <Address>134219248</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
-<<<<<<< HEAD
-          <BreakIfRCount>0</BreakIfRCount>
-          <Filename>.\User\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression></Expression>
-=======
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>.\User\main.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\lab1\User/main.c\13</Expression>
->>>>>>> main
+          <Expression>\\lab1\User/main.c\53</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-<<<<<<< HEAD
-          <ItemText>RCC_GetClocksFreq,0x10</ItemText>
-=======
-          <ItemText>RCC_GetClocksFreq,0x0A</ItemText>
->>>>>>> main
+          <ItemText>RCC_Clocks1,0x0A</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -195,7 +178,7 @@
       </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
-        <periodic>1</periodic>
+        <periodic>0</periodic>
         <aLwin>1</aLwin>
         <aCover>0</aCover>
         <aSer1>0</aSer1>
@@ -264,7 +247,7 @@
 
   <Group>
     <GroupName>Pl</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -808,7 +791,7 @@
 
   <Group>
     <GroupName>::Device</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>

@@ -1,6 +1,6 @@
 #include "stm32f4xx.h"                  // Device header
 
-void RCC_DeInit(void)
+void RCC_deInit(void)
 {
 	SET_BIT(RCC->CR, RCC_CR_HSION);
 	while(READ_BIT(RCC->CR, RCC_CR_HSIRDY == RESET)) {}
@@ -26,26 +26,27 @@ void SetSysClockTo168(void)
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_HPRE, RCC_CFGR_HPRE_DIV1);
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE2, RCC_CFGR_PPRE2_DIV1);
 	MODIFY_REG(RCC->CFGR, RCC_CFGR_PPRE1, RCC_CFGR_PPRE1_DIV2);
+	//MODIFY_REG(RCC->CFGR, RCC_CFGR_PLLSRC | RCC_CFGR_PLLXTPRE | RCC_CFGR_PLLMULL, RCC_CFGR_PLLSRC | RCC_CFGR_PLLMULL9);
+	SET_BIT(RCC->CR, RCC_CR_PLLON);
+	//while(READ_BIT(RCC->CR, RCC_CFGR_PLLRDY)!= (RCC_CFGR_PLLRDY)) {}
+	MODIFY_REG(RCC->CFGR, RCC_CFGR_SW, RCC_CFGR_SW_PLL);
+	while(READ_BIT(RCC->CFGR, RCC_CFGR_SWS) != (RCC_CFGR_SWS_PLL)) {}
 }
 
 int main(void)
 	{
-<<<<<<< HEAD
-		RCC_ClocksTypeDef RCC_Clocks1;
-		
-		RCC_PLLConfig(RCC_PLLSource_HSE, 8, 336, 2, 7);
-=======
-		
+
 		//SystemCoreClock = HSE_VALUE;
 		
-//		RCC_PLLConfig(RCC_PLLSource_HSE, 8, 336, 2, 7);
 				
 		RCC_ClocksTypeDef RCC_Clocks1;
 		
-		RCC_DeInit();
+		RCC_deInit();
 		
 		SetSysClockTo168();
->>>>>>> main
+		
+		RCC_PLLConfig(RCC_PLLSource_HSE, 8, 336, 2, 7);
+
 		
 		RCC_GetClocksFreq(&RCC_Clocks1);
 		
