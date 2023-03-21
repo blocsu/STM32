@@ -358,7 +358,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath></IncludePath>
+              <IncludePath>.\User;.\Pl;.\Pl\inc;.\Pl\src</IncludePath>
             </VariousControls>
           </Aads>
           <LDads>
