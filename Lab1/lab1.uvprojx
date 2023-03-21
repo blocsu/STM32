@@ -415,14 +415,14 @@
               <FilePath>.\Pl\src\stm32f4xx_cec.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f4xx_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\Pl\src\stm32f4xx_crc.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32f4xx_cryp.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Pl\src\stm32f4xx_cryp.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_crc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Pl\src\stm32f4xx_crc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f4xx_cryp_aes.c</FileName>
