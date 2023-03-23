@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "Lab1_Test.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -41,6 +42,8 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+uint32_t test;
+uint8_t vrnt;
 
 /* USER CODE END PV */
 
@@ -63,6 +66,9 @@ static void MX_GPIO_Init(void);
 int main(void)
 {
   /* USER CODE BEGIN 1 */
+	
+	
+	
 
   /* USER CODE END 1 */
 
@@ -159,6 +165,9 @@ void SystemClock_Config(void)
   {
     Error_Handler();
   }
+	test = Lab1_Test_ini("Dotsenko");
+	
+	vrnt = get_variant();
 }
 
 /**
@@ -194,6 +203,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+
 
 /* USER CODE END 4 */
 

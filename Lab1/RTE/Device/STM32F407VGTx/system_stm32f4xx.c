@@ -111,10 +111,10 @@
 #endif /* USER_VECT_TAB_ADDRESS */
 /******************************************************************************/
 
+
 /**
   * @}
   */
-
 /** @addtogroup STM32F4xx_System_Private_Macros
   * @{
   */
