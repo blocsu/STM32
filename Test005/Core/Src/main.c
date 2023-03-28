@@ -21,7 +21,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stm32f4xx_hal.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -39,16 +39,17 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
+TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-uint32_t test;
-uint8_t vrnt;
+
 
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
+static void MX_TIM6_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -89,8 +90,10 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
-
+	//HAL_TIM_Base_Start(&htim6); //запускаем таймер 6
+	HAL_TIM_Base_Start_IT(&htim6); //включаем тактирование на таймере 6
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -100,23 +103,18 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_0) == GPIO_PIN_SET)
+		if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_0)==GPIO_PIN_SET)
 		{
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_12);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_12);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_13);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_13);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_14);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_14);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_15);
-			HAL_Delay(500);
-			HAL_GPIO_TogglePin (GPIOD, GPIO_PIN_15);
-    }
+			//HAL_TIM_Base_Start(&htim6);
+			HAL_TIM_Base_Start_IT(&htim6);
+		}
 		else
+		{
+			tim6_counter=0;
+			//HAL_TIM_Base_Stop(&htim6);
+			HAL_TIM_Base_Stop_IT(&htim6);
 			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+		}
 	}
   /* USER CODE END 3 */
 }
@@ -157,13 +155,51 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_PCLK1|RCC_CLOCKTYPE_PCLK2;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.AHBCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV4;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV2;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_HCLK_DIV16;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV8;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_5) != HAL_OK)
   {
     Error_Handler();
   }
+}
+
+/**
+  * @brief TIM6 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM6_Init(void)
+{
+
+  /* USER CODE BEGIN TIM6_Init 0 */
+
+  /* USER CODE END TIM6_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM6_Init 1 */
+
+  /* USER CODE END TIM6_Init 1 */
+  htim6.Instance = TIM6;
+  htim6.Init.Prescaler = 20999;
+  htim6.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim6.Init.Period = 499;
+  htim6.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
+  if (HAL_TIM_Base_Init(&htim6) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_UPDATE;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim6, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM6_Init 2 */
+
+  /* USER CODE END TIM6_Init 2 */
+
 }
 
 /**

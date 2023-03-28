@@ -28,6 +28,7 @@ extern "C" {
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f4xx_hal.h"
+uint8_t tim6_counter;
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
