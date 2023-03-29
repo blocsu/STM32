@@ -43,9 +43,10 @@
 TIM_HandleTypeDef htim6;
 
 /* USER CODE BEGIN PV */
-uint32_t test;
+uint32_t Test;
 uint8_t vrnt;
-
+uint8_t tim6_count = 0;
+uint8_t *decision;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,6 +60,7 @@ static void MX_TIM6_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 
+
 /* USER CODE END 0 */
 
 /**
@@ -69,7 +71,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	
-	
+	vrnt = Lab3_Test_ini("Dotsenko");
 	
 
   /* USER CODE END 1 */
@@ -95,7 +97,7 @@ int main(void)
   MX_TIM6_Init();
   /* USER CODE BEGIN 2 */
 	//HAL_TIM_Base_Start(&htim6); //запускаем таймер 6
-	HAL_TIM_Base_Start_IT(&htim6); //включаем тактирование на таймере 6
+	//HAL_TIM_Base_Start_IT(&htim6); //включаем тактирование на таймере 6
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,18 +107,41 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
+		Test = while_Test(decision);
 		if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_0)==GPIO_PIN_SET)
 		{
-			//HAL_TIM_Base_Start(&htim6);
-			HAL_TIM_Base_Start_IT(&htim6);
+			HAL_Delay(150);
+			if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_0)==GPIO_PIN_SET) 
+				{
+					switch(tim6_count)
+					{
+						case 0:
+						case 3:
+						case 5:	
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12, GPIO_PIN_SET);
+							break;
+						case 1:
+						case 6:
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_13, GPIO_PIN_SET);				  
+							break;
+						case 2:
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_14, GPIO_PIN_SET);
+							break;
+						case 4:
+						case 7:
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
+							HAL_GPIO_WritePin(GPIOD, GPIO_PIN_15, GPIO_PIN_SET);
+							break;
+					}
+					if(tim6_count<7) tim6_count++;
+					else tim6_count=0;
+			  }
 		}
-		else
-		{
-			tim6_count=0;
-			//HAL_TIM_Base_Stop(&htim6);
-			HAL_TIM_Base_Stop_IT(&htim6);
-			HAL_GPIO_WritePin(GPIOD, GPIO_PIN_12|GPIO_PIN_13|GPIO_PIN_14|GPIO_PIN_15, GPIO_PIN_RESET);
-		}
+				
+		 
 	}
   /* USER CODE END 3 */
 }

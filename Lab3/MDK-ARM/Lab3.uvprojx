@@ -414,6 +414,16 @@
               <FileType>5</FileType>
               <FilePath>..\Core\Inc\main.h</FilePath>
             </File>
+            <File>
+              <FileName>Lab3_Test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\Core\Src\Lab3_Test.h</FilePath>
+            </File>
+            <File>
+              <FileName>Lab3_Test.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>..\Core\Src\Lab3_Test.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
