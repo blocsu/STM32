@@ -38,6 +38,7 @@ int main(void)
 	{
 
 		//SystemCoreClock = HSE_VALUE;
+		SystemCoreClockUpdate();
 		
 				
 		RCC_ClocksTypeDef RCC_Clocks1;
