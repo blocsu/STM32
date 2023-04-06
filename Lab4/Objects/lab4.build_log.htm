@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Evgeny Dotsenko, Home, LIC=----
+License Information: Evgeny Dotsenko, home, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
@@ -21,12 +21,13 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\MK\STM32\Lab4\lab4.uvprojx
-Project File Date:  04/05/2023
+D:\MK\STM32\Lab4\lab4.uvprojx
+Project File Date:  04/06/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
+compiling main.c...
 User/main.c(1): warning: In file included from...
 ./Pl\stm32f4xx.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
@@ -375,526 +376,608 @@ User/main.c(1): warning: In file included from...
 ./Pl\stm32f4xx.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *           - Macros to access peripheral<92>s registers hardware
                                            ^
-User/main.c(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(11): warning: no previous extern declaration for non-static variable 'SysTick_CNT' [-Wmissing-variable-declarations]
+__IO uint32_t SysTick_CNT = 0;
+              ^
+User/main.c(11): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint32_t SysTick_CNT = 0;
+     ^
+User/main.c(12): warning: no previous extern declaration for non-static variable 'TIM2_count' [-Wmissing-variable-declarations]
+__IO uint8_t TIM2_count =0;
+             ^
+User/main.c(12): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint8_t TIM2_count =0;
+     ^
+User/main.c(17): warning: no previous prototype for function 'SysTick_Init' [-Wmissing-prototypes]
+void SysTick_Init(void)
+     ^
+User/main.c(17): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Init(void)
+^
+static 
+User/main.c(24): warning: no previous prototype for function 'delay_ms' [-Wmissing-prototypes]
+void delay_ms(uint32_t ms)
+     ^
+User/main.c(24): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void delay_ms(uint32_t ms)
+^
+static 
+User/main.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         /*Wait till HSE is ready (<C6><E4><B8><EC> <EA><EE><E3><E4><E0> HSE <E1><F3><E4><E5><F2> <E3><EE><F2><EE><E2>)
                                   ^
-User/main.c(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         /*Wait till HSE is ready (<C6><E4><B8><EC> <EA><EE><E3><E4><E0> HSE <E1><F3><E4><E5><F2> <E3><EE><F2><EE><E2>)
                                                    ^
-User/main.c(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         /*Wait till HSE is ready (<C6><E4><B8><EC> <EA><EE><E3><E4><E0> HSE <E1><F3><E4><E5><F2> <E3><EE><F2><EE><E2>)
                                                                             ^
-User/main.c(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(43): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         /*Wait till HSE is ready (<C6><E4><B8><EC> <EA><EE><E3><E4><E0> HSE <E1><F3><E4><E5><F2> <E3><EE><F2><EE><E2>)
                                                                                                  ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
 ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                  ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                           ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                            ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                 ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                    ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                 ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                                                       ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                                                                            ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                                                                                                         ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                                                                                                                      ^
-User/main.c(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 <D4><EB><E0><E3> <E3><EE><F2><EE><E2><ED><EE><F1><F2><E8> <E2><ED><E5><F8><ED><E5><E3><EE> <E2><FB><F1><EE><EA><EE><F1><EA><EE><F0><EE><F1><F2><ED><EE><E3><EE> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><FF> - <F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><F2><F1><FF> <E0><EF><EF><E0><F0><E0><F2><ED><EE>, <F7><F2><EE><E1><FB> <F3><EA><E0><E7><E0><F2><FC> <F7><F2><EE> <E3><E5><ED><E5><F0><E0><F2><EE><F0> HSE <F1><F2><E0><E1><E8><EB><E5><ED>*/
                                                                                                                                                                                                                                                                                                                                                                                                                               ^
-User/main.c(18): warning: no previous prototype for function 'SetSysClockTo168' [-Wmissing-prototypes]
+User/main.c(39): warning: no previous prototype for function 'SetSysClockTo168' [-Wmissing-prototypes]
 void SetSysClockTo168(void)
      ^
-User/main.c(18): note: declare 'static' if the function is not intended to be used outside of this translation unit
+User/main.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void SetSysClockTo168(void)
 ^
 static 
-User/main.c(79): warning: non-void function does not return a value in all control paths [-Wreturn-type]
-                        }
-                        ^
-User/main.c(84): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(70): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_LED; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_LED <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                     ^
-User/main.c(84): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(70): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_LED; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_LED <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                              ^
-User/main.c(84): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(70): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_LED; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_LED <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                       ^
-User/main.c(84): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(70): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_LED; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_LED <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                            ^
-User/main.c(84): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(70): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_LED; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_LED <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                                                 ^
-User/main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                        ^
-User/main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                 ^
-User/main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                             ^
-User/main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                                  ^
-User/main.c(85): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(71): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
                                                                                                                                                                                                       ^
-User/main.c(87): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> D
                                                                         ^
-User/main.c(87): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> D
                                                                                                          ^
-User/main.c(87): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(73): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOD, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> D
                                                                                                                                                           ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                     ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                                                                          ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                                                                                                               ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                                                                                                                    ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                                                                                                                                                                 ^
-User/main.c(89): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(75): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Pin = GPIO_Pin_12 | GPIO_Pin_13 | GPIO_Pin_14 | GPIO_Pin_15; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E0><F5> 12-15
                                                                                                                                                                                                                                                          ^
-User/main.c(90): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(76): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Mode = GPIO_Mode_OUT; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><E8> 12-15 <ED><E0> <E2><FB><F5><EE><E4>
                                                              ^
-User/main.c(90): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(76): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Mode = GPIO_Mode_OUT; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><E8> 12-15 <ED><E0> <E2><FB><F5><EE><E4>
                                                                                               ^
-User/main.c(90): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(76): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Mode = GPIO_Mode_OUT; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><E8> 12-15 <ED><E0> <E2><FB><F5><EE><E4>
                                                                                                                          ^
-User/main.c(90): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(76): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Mode = GPIO_Mode_OUT; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><E8> 12-15 <ED><E0> <E2><FB><F5><EE><E4>
                                                                                                                                   ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                                                     ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                                                                                          ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                                                                                                   ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                                                                                                                                                                ^
-User/main.c(91): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(77): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
                                                                                                                                                                                                                                     ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                               ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                                                            ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                                                                                                             ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                                                                                                                                                                  ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                                                                                                                                                                           ^
-User/main.c(92): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(78): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
                                                                                                                                                                                                                            ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                 ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                  ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                   ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                     ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                          ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                   ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                                     ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                                                                  ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                                                                                                           ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                                                                                                                        ^
-User/main.c(93): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(79): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_struct_LED.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
                                                                                                                                                                                                                                                                                                                                                                 ^
-User/main.c(95): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_Init(GPIOD, &GPIO_struct_LED); //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><EE><F0><F2> D
                                                       ^
-User/main.c(95): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(81): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 GPIO_Init(GPIOD, &GPIO_struct_LED); //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><EE><F0><F2> D
                                                                                                                ^
-User/main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> A
-                                                                        ^
-User/main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> A
-                                                                                                         ^
-User/main.c(97): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //<E2><EA><EB><FE><F7><E0><E5><EC> <F2><E0><EA><F2><E8><F0><EE><E2><E0><ED><E8><E5> <EF><EE><F0><F2><E0> A
-                                                                                                                                                          ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                            ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                                                                                 ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                                                                                                                      ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                                                                                                                           ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                                                                                                                                                                        ^
-User/main.c(99): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Pin = GPIO_Pin_0; //<EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC> <F1><F2><F0><F3><EA><F2><F3><F0><F3> <F1> <EF><E0><F0><E0><EC><E5><F2><F0><E0><EC><E8> <ED><E0> <ED><EE><E6><EA><E5> PA0
-                                                                                                                                                                                                                 ^
-User/main.c(100): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Mode = GPIO_Mode_IN; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><F3> PA0 <ED><E0> <E2><F5><EE><E4>
-                                                               ^
-User/main.c(100): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Mode = GPIO_Mode_IN; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><F3> PA0 <ED><E0> <E2><F5><EE><E4>
-                                                                                                ^
-User/main.c(100): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Mode = GPIO_Mode_IN; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><F3> PA0 <ED><E0> <E2><F5><EE><E4>
-                                                                                                                         ^
-User/main.c(100): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Mode = GPIO_Mode_IN; //<E2><EA><EB><FE><F7><E0><E5><EC> <ED><EE><E6><EA><F3> PA0 <ED><E0> <E2><F5><EE><E4>
-                                                                                                                                  ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                  ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                                                       ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                                                                                            ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                                                                                                     ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                                                                                                                                                                  ^
-User/main.c(101): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_Speed = GPIO_Low_Speed; //<F3><F1><F2><E0><ED><EE><E2><E8><EC> <F1><EA><EE><F0><EE><F1><F2><FC> LOW <ED><E0> <EA><EE><ED><F4><E8><E3><F3><F0><E8><F0><F3><E5><EC><FB><E5> <ED><EE><E6><EA><E8> <EF><EE><F0><F2><E0>*/
-                                                                                                                                                                                                                                       ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                 ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                                              ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                                                                                               ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                                                                                                                                                    ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                                                                                                                                                             ^
-User/main.c(102): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_OType = GPIO_OType_PP; //<E2><EA><EB><FE><F7><E5><EC> <EE><E4><F2><FF><E3><E8><E2><E0><FE><F9><E5><E5> <F1><EE><EF><F0><EE><F2><E8><E2><EB><E5><ED><E8><E5> <ED><E0> <E2><E5><F1><FC> <EF><EE><F0><F2>
-                                                                                                                                                                                                                              ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                  ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                   ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                    ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                     ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                  ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                       ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                            ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                     ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                                       ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                                                                    ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                                                                                                             ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                                                                                                                          ^
-User/main.c(103): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_struct_Button.GPIO_PuPd = GPIO_PuPd_NOPULL;//<FD><F2><EE><F2> <EF><E0><F0><E0><EC><E5><F2><F0> <E8><F1><EF><EE><EB><FC><E7><F3><E5><F2><F1><FF> <EF><F0><E8> <E2><EA><EB><FE><F7><E5><ED><E8><E8> <EF><EE><F0><F2><E0> <ED><E0> <E2><F5><EE><E4>, <EF><EE><FD><F2><EE><EC><F3> <F3><F1><F2><E0><ED><EE><E2><E8><EB><E8> <E5><E3><EE> <EF><EE> <F3><EC><EE><EB><F7><E0><ED><E8><FE>
-                                                                                                                                                                                                                                                                                                                                                                   ^
-User/main.c(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_Init(GPIOA, &GPIO_struct_Button); //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><EE><F0><F2> A
-                                                         ^
-User/main.c(105): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                GPIO_Init(GPIOA, &GPIO_struct_Button); //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><EE><F0><F2> A
-                                                                                                                  ^
-User/main.c(129): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-                        Button_State = Rattle_Of_Button();
-                                     ~ ^~~~~~~~~~~~~~~~~~
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                           ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                         ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                      ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                 ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                          ^
-User/main.c(141): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(107): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                                               ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                     ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                          ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                       ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                    ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                               ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                        ^
-User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(108): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                                             ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                           ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                         ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                      ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                 ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                          ^
-User/main.c(146): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(112): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                                               ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                     ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                          ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                       ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                    ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                               ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                        ^
-User/main.c(147): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+User/main.c(113): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                                             ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                           ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                         ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                      ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                 ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                          ^
-User/main.c(150): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(117): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                                               ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                     ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                          ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                       ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                    ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                               ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                        ^
-User/main.c(151): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+User/main.c(118): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_12); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12
                                                                                                                                                                                                                                                                                             ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                           ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                         ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                      ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                 ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                          ^
-User/main.c(155): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(122): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
                                                                                                                                                                                                                                                                                                                               ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                    ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                         ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                      ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                   ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                              ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                                       ^
+User/main.c(123): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                                                            ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                          ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                               ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                        ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                     ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                         ^
+User/main.c(127): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                                              ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                    ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                         ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                      ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                   ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                              ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                                       ^
+User/main.c(128): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_13); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD13
+                                                                                                                                                                                                                                                                                            ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                          ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                               ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                        ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                     ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                         ^
+User/main.c(132): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                                              ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                    ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                         ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                                                      ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                                                                                   ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                                                                                                                              ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                                                                                                                                       ^
+User/main.c(133): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_14); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD14
+                                                                                                                                                                                                                                                                                            ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                          ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                               ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                        ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                     ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                         ^
+User/main.c(137): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                                              ^
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                     ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                          ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                       ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                    ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                                                               ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                                                                        ^
-User/main.c(156): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(138): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                                                                 GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                                                                                             ^
-User/main.c(116): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                          ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                               ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                        ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                     ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                         ^
+User/main.c(142): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><F3> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD12/13/14/15
+                                                                                                                                                                                                                                                                                                                              ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                    ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                         ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                                                      ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                                                                                   ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                                                                                                                              ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                                                                                                                                       ^
+User/main.c(143): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                                                                GPIO_SetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <E2><FB><F1><EE><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 1 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
+                                                                                                                                                                                                                                                                                            ^
+User/main.c(91): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
                 RCC_ClocksTypeDef RCC_Clocks1;
                                   ^
-User/main.c(174): warning: no previous prototype for function 'TIM2_IRQHandler' [-Wmissing-prototypes]
-        void TIM2_IRQHandler(void)
+User/main.c(71): warning: unused variable 'GPIO_struct_Button' [-Wunused-variable]
+                GPIO_InitTypeDef GPIO_struct_Button; //<E8><ED><E8><F6><E8><E0><EB><E8><E7><E8><F0><F3><E5><EC> <EF><E5><F0><E5><EC><E5><ED><ED><F3><FE> GPIO_struct_Button <F1> <F2><E8><EF><EE><EC> <F1><F2><F0><F3><EA><F2><F3><F0><FB> GPIO_InitTypeDef
+                                 ^
+User/main.c(160): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+        void SysTick_Handler(void)
              ^
-User/main.c(174): note: declare 'static' if the function is not intended to be used outside of this translation unit
-        void TIM2_IRQHandler(void)
+User/main.c(160): note: declare 'static' if the function is not intended to be used outside of this translation unit
+        void SysTick_Handler(void)
         ^
         static 
-User/main.c(49): warning: no previous extern declaration for non-static variable 'decision' [-Wmissing-variable-declarations]
-uint8_t *decision;
-         ^
-User/main.c(49): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint8_t *decision;
+User/main.c(13): warning: no previous extern declaration for non-static variable 'TestVar' [-Wmissing-variable-declarations]
+uint8_t TestVar;
+        ^
+User/main.c(13): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t TestVar;
 ^
-249 warnings generated.
-compiling main.c...
+User/main.c(14): warning: no previous extern declaration for non-static variable 'Test' [-Wmissing-variable-declarations]
+uint32_t Test;
+         ^
+User/main.c(14): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t Test;
+^
+User/main.c(15): warning: no previous extern declaration for non-static variable 'data' [-Wmissing-variable-declarations]
+uint8_t *data;
+         ^
+User/main.c(15): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t *data;
+^
+270 warnings generated.
 linking...
-Program Size: Code=2120 RO-data=424 RW-data=0 ZI-data=1640  
-".\Objects\lab4.axf" - 0 Error(s), 249 Warning(s).
+Program Size: Code=4376 RO-data=468 RW-data=512 ZI-data=1672  
+".\Objects\lab4.axf" - 0 Error(s), 270 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -912,20 +995,20 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Target_1
-  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
-Build Time Elapsed:  00:00:05
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

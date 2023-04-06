@@ -1,5 +1,6 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
+".\User\Lab4_Test.lib"
 ".\objects\misc.o"
 ".\objects\stm32f4xx_adc.o"
 ".\objects\stm32f4xx_can.o"
