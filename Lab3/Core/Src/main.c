@@ -71,7 +71,7 @@ int main(void)
 {
   /* USER CODE BEGIN 1 */
 	
-	vrnt = Lab3_Test_ini("Dotsenko");
+	//vrnt = Lab3_Test_ini("Dotsenko");
 	
 
   /* USER CODE END 1 */
@@ -107,7 +107,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		Test = while_Test(decision);
+		//Test = while_Test(decision);
 		if(HAL_GPIO_ReadPin (GPIOA, GPIO_PIN_0)==GPIO_PIN_SET)
 		{
 			HAL_Delay(150);

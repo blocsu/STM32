@@ -3,6 +3,7 @@
 "test005\main.o"
 "test005\stm32f4xx_it.o"
 "test005\stm32f4xx_hal_msp.o"
+"..\Core\Src\Lab4_Test.lib"
 "test005\stm32f4xx_hal_tim.o"
 "test005\stm32f4xx_hal_tim_ex.o"
 "test005\stm32f4xx_hal_rcc.o"
