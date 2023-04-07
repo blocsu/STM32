@@ -2,31 +2,32 @@
 #include "main.h"
 #include "Lab4_Test.h"
 
-#define SYSCLOC 168000000U
+//#define SYSCLOC 168000000U
 
 #define TIM_EnableIT_UPDATE(TIMx) SET_BIT(TIMx->DIER, TIM_DIER_UIE)
 #define TIM_EnableCounter(TIMx) SET_BIT(TIMx->CR1, TIM_CR1_CEN)
 #define TIM_DisableCounter(TIMx) CLEAR_BIT(TIMx-> CR1, TIM_CR1_CEN)
 
-__IO uint32_t SysTick_CNT = 0;
+__IO uint32_t SysTick_CNT = 1000;
 __IO uint8_t TIM2_count =0;
 uint8_t TestVar;
 uint32_t Test;
 uint8_t *data;
+uint8_t flag;
 
-void SysTick_Init(void)
-{
-	MODIFY_REG(SysTick->LOAD,SysTick_LOAD_RELOAD_Msk, SYSCLOC/1000-1);
-	CLEAR_BIT(SysTick->VAL,SysTick_VAL_CURRENT_Msk);
-	SET_BIT(SysTick->CTRL, SysTick_CTRL_CLKSOURCE_Msk |SysTick_CTRL_ENABLE_Msk | SysTick_CTRL_TICKINT_Msk);
-}
+//void SysTick_Init(void)
+//{
+//	MODIFY_REG(SysTick->LOAD,SysTick_LOAD_RELOAD_Msk, SYSCLOC/1000-1);
+//	CLEAR_BIT(SysTick->VAL,SysTick_VAL_CURRENT_Msk);
+//	SET_BIT(SysTick->CTRL, SysTick_CTRL_CLKSOURCE_Msk |SysTick_CTRL_ENABLE_Msk | SysTick_CTRL_TICKINT_Msk);
+//}
 
-void delay_ms(uint32_t ms)
-{
-	MODIFY_REG(SysTick->VAL, SysTick_VAL_CURRENT_Msk, SYSCLOC/1000 - 1);
-	SysTick_CNT = ms;
-	while(SysTick_CNT) {}
-}
+//void delay_ms(uint32_t ms)
+//{
+//	MODIFY_REG(SysTick->VAL, SysTick_VAL_CURRENT_Msk, SYSCLOC/1000 - 1);
+//	SysTick_CNT = ms;
+//	while(SysTick_CNT) {}
+//}
 
 static void TIM2_Init(void)
 {
@@ -53,7 +54,7 @@ void SetSysClockTo168(void)
 	MODIFY_REG(RCC->CR, RCC_CR_CSSON, RCC_CR_CSSON);
 	RCC->PLLCFGR &= ~RCC_PLLCFGR_PLLM;
 	//RCC->PLLCFGR |= RCC_PLLCFGR_PLLM_3;
-	//MODIFY_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, RCC_PLLCFGR_PLLN_3 | RCC_PLLCFGR_PLLN_5 | RCC_PLLCFGR_PLLN_7);
+	//MODIFY_REG(RCC->PLLCFGR, RCC_PLLCFGR_PLLN, RCC_PLLCFGR_PLLN_2 | RCC_PLLCFGR_PLLN_5 | RCC_PLLCFGR_PLLN_6);
 	RCC->PLLCFGR &= ~RCC_PLLCFGR_PLLN;
   RCC->PLLCFGR |= 0x402A04;
   MODIFY_REG(RCC->CFGR, RCC_PLLCFGR_PLLSRC | RCC_PLLCFGR_PLLSRC_HSI, RCC_PLLCFGR_PLLSRC_HSE);
@@ -91,65 +92,72 @@ int main(void)
 		RCC_ClocksTypeDef RCC_Clocks1;
 		
 				
-		SetSysClockTo168();
+		//SetSysClockTo168();
 		//SysTick_Init();
-		SysTick_Config(SystemCoreClock /1000);//1ms
 		
-
+		
+		
+		SysTick_Config(SystemCoreClock /1000);//
 		SystemCoreClockUpdate();
+				
 		RCC_GetClocksFreq(&RCC_Clocks1);
 		
 		while(1)
 		{
+			if(flag == 1) 
+			{
+				flag = 0;
 			
-			switch(TIM2_count)
+			  switch(TIM2_count)
 						{
 							case 0:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
-							  delay_ms(4100);
+							  SysTick_CNT = 4100;
 							  break;
 							case 3:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
-							  delay_ms(200);
+							  SysTick_CNT = 200;
 							  break;
 							case 5:	
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
-							  delay_ms(2000);
+							  SysTick_CNT = 2000;
 							  break;
 							case 1:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
-							  delay_ms(100);
+							  SysTick_CNT = 100;
 							  break;
 							case 6:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
-							  delay_ms(3800);
+							  SysTick_CNT = 3800;
 							  break;
 							case 2:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_14); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD14
-							  delay_ms(4100);
+							  SysTick_CNT = 4100;
 							  break;
 							case 4:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
-							  delay_ms(1000);
+							  SysTick_CNT = 1000;
 							  break;
 							case 7:
 								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 								GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
-							  delay_ms(2800);
+							  SysTick_CNT = 2800;
 							  break;
-//							
+							
 						}
-						Test = read_flag(data);
+						
 						if(TIM2_count<7) TIM2_count++;
 						else TIM2_count=0;
-  	  
+				
+			}
+			Test = read_flag(data);
 		}
 		
 				
@@ -157,8 +165,64 @@ int main(void)
 	
 	void SysTick_Handler(void)
 		{
-			if(SysTick_CNT > 0) SysTick_CNT--;
-			
+			if(SysTick_CNT > 0) 
+			{
+				SysTick_CNT--;
+				if(SysTick_CNT == 1)
+				{
+					flag = 1;
+				}
+//			}else {
+//			  switch(TIM2_count)
+//						{
+//							case 0:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+//							  SysTick_CNT = 41000;
+//							  break;
+//							case 3:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+//							  SysTick_CNT = 2000;
+//							  break;
+//							case 5:	
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+//							  SysTick_CNT = 20000;
+//							  break;
+//							case 1:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
+//							  SysTick_CNT = 1000;
+//							  break;
+//							case 6:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
+//							  SysTick_CNT = 38000;
+//							  break;
+//							case 2:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_14); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD14
+//							  SysTick_CNT = 41000;
+//							  break;
+//							case 4:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
+//							  SysTick_CNT = 10000;
+//							  break;
+//							case 7:
+//								GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
+//								GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
+//							  SysTick_CNT = 28000;
+//							  break;
+//							
+//						}
+//						
+//						if(TIM2_count<7) TIM2_count++;
+//						else TIM2_count=0;
+				
+			}
+//			Test = read_flag(data);
 		}
 	
 //	void TIM2_IRQHandler(void)
