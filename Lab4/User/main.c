@@ -58,9 +58,7 @@ int main(void) {
 		
 	GPIO_Init(GPIOD, &GPIO_struct_LED); //инициализируем порт D
 
-	TestVar = Lab4_Test_ini("Dotsenko");
-
-						
+							
 	RCC_ClocksTypeDef RCC_Clocks1;
 		
 				
@@ -70,9 +68,12 @@ int main(void) {
 		
 	SysTick_Config(SystemCoreClock /1000);
 				
-	RCC_GetClocksFreq(&RCC_Clocks1);
+	//RCC_GetClocksFreq(&RCC_Clocks1);
 		
 		while(1) {
+			
+			Test = read_flag(data);
+			
 			if(flag == 1)  {
 				flag = 0;
 			
@@ -81,55 +82,53 @@ int main(void) {
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
 						SysTick_CNT = 4100;
-						break;
+					  break;
 							  
 					case 1:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
 						SysTick_CNT = 100;
-						break;
+					  break;
 							  
 					case 2:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_14); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD14
 						SysTick_CNT = 4100;
-						break;
+					  break;
 							  
 					case 3:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
 						SysTick_CNT = 200;
-						break;
+					  break;
 							  
 					case 4:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
 						SysTick_CNT = 1000;
-						break;
+					  break;
 							  
 					case 5:	
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
 						SysTick_CNT = 2000;
-						break;
+					  break;
 							  
 					case 6:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
 						SysTick_CNT = 3800;
-						break;
+					  break;
 							  
 					case 7:
 						GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
 						GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
 						SysTick_CNT = 2800;
-						break;
+					  break;
 				}
-				Test = read_flag(data);		
-				if(++TIM2_count == 8) TIM2_count = 0;
-			}
-			
-			//Test = read_flag(data);
+				TestVar = Lab4_Test_ini("Dotsenko");
+				if(++TIM2_count == 8) TIM2_count = 0;				
+			}			
 		}
 }
 	

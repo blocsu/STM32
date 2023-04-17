@@ -66,7 +66,10 @@ int main(void)
 
 		TestVar = Lab3_Test_ini("Dotsenko");
 
-    
+    RCC_ClocksTypeDef RCC_Clocks1;
+		
+				
+	  RCC_GetClocksFreq(&RCC_Clocks1);
 		
 		while(1)
 		{
