@@ -8,19 +8,19 @@
 //#define TIM_EnableCounter(TIMx) SET_BIT(TIMx->CR1, TIM_CR1_CEN)
 //#define TIM_DisableCounter(TIMx) CLEAR_BIT(TIMx-> CR1, TIM_CR1_CEN)
 
-__IO uint32_t SysTick_CNT = 0;
-__IO uint8_t i = 7;
+static __IO uint32_t SysTick_CNT = 0;
+static __IO uint8_t i = 7;
 
 uint8_t TestVar;
 uint32_t Test;
-uint8_t data[3] = {0, 0, 0};
+static uint8_t data[3] = {0, 0, 0};
 
-uint16_t Button_Press = 0;
-uint16_t Button_State = 0;
-uint8_t  Button_Count = 10;
+static uint16_t Button_Press = 0;
+static uint16_t Button_State = 0;
+static uint8_t  Button_Count = 10;
 
 
-void SetSysClockTo168(void) {
+static void SetSysClockTo168(void) {
 	//Enable HSE
 	SET_BIT(RCC->CR, RCC_CR_HSEON);
 	/*Wait till HSE is ready (Ждём когда HSE будет готов)
@@ -137,7 +137,6 @@ int main(void) {
 }
 	
 void SysTick_Handler(void) {
-//	if(SysTick_CNT) { if(--SysTick_CNT == 0) flag = 1; }
 
 	// Опрос кнопки
 	if(--Button_Count == 0) {
@@ -145,10 +144,10 @@ void SysTick_Handler(void) {
 	  
 		Button_Count = 10;
 		
-		if(new_state != Button_State) {
+		if(new_state != Button_State) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
 			if(new_state == Bit_SET) Button_Press = 1;
 
-			Button_State = new_state;			
+			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
 		}
 	}
 	
