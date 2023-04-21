@@ -21,9 +21,9 @@ void timer_ini(void)
 	
 	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 	
-	timer_struct.TIM_Prescaler = 5000-1; //4400
+	timer_struct.TIM_Prescaler = 5-1; //4400000
 	timer_struct.TIM_CounterMode = TIM_CounterMode_Up;
-	timer_struct.TIM_Period = 1;
+	timer_struct.TIM_Period = 1000;
 	timer_struct.TIM_ClockDivision = TIM_CKD_DIV1;
 	timer_struct.TIM_RepetitionCounter = 0;
 	

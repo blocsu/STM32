@@ -76,13 +76,13 @@ int main(void) {
 	timer_ini();
 				
 	RCC_GetClocksFreq(&RCC_Clocks1);
+	
+	TestVar = Lab6_Test_ini("Dotsenko");
 		
 	while(1) {
 		
 		Test = while_Test(data);
-
-						
-		TestVar = Lab6_Test_ini("Dotsenko");
+		
 	}
 }
 	
