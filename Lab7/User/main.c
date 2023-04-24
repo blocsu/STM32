@@ -21,6 +21,28 @@ uint8_t TestVar;
 uint32_t Test;
 static uint8_t decision[4] = {0, 0, 0, 0};
 
+void USART2_IRQHandler(void) {
+	if (USART_GetITStatus(USART2, USART_IT_TXE) == 1) {
+		USART_ClearITPendingBit(USART2, USART_IT_TXE);
+		
+		if (count == count_size) {
+			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
+			count = 0;
+		}else {
+			USART_SendData(USART2, TX_Buffer[count]);
+			count++;
+		}
+	}
+	
+	if (USART_GetITStatus(USART2, USART_IT_RXNE) == 1) {
+		USART_ClearITPendingBit(USART2, USART_IT_RXNE);
+		RX_Buffer[RX_wr] = USART_ReceiveData(USART2);
+		RX_wr++;
+		RX_count++;		
+	}
+
+}
+
 
 static void SetSysClockTo168(void) {
 	//Enable HSE
@@ -102,15 +124,15 @@ int main(void) {
 	TX_Buffer[3] = 3;
 	TX_Buffer[4] = 4;
 	
-	//Send_Buffer_init(4);
+	Send_Buffer_Init(4);
 	
 	TestVar = lab7_test_ini("Dotsenko");
 		
 	while(1) {
 		
-		//while_test(USART_GetFlagStatus(USART2, USART_FLAG_TC) == 0);
-		USART_SendData(USART2, i);
-		i++;
+//		while(USART_GetFlagStatus(USART2, USART_FLAG_TC) == 0);
+//		USART_SendData(USART2, i);
+//		i++;
 		
 		Test = while_test(decision);
 		
