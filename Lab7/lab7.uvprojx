@@ -419,6 +419,11 @@
               <FileType>1</FileType>
               <FilePath>.\User\usart.c</FilePath>
             </File>
+            <File>
+              <FileName>LED_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\LED_init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

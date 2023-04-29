@@ -1,5 +1,6 @@
 #include "stm32f4xx.h"  // Device header
 #include "main.h"
+#include "LED_init.h"
 #include "Lab5_Test.h"
 
 //#define SYSCLOC 168000000U
@@ -92,43 +93,43 @@ int main(void) {
 			
 			switch(i) {
 				case 0:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+					OFF_All_LEDs
+					Green_ON						
 					break;
 							
 				case 1:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
+					OFF_All_LEDs
+					Yellow_ON
 					break;
 							
 				case 2:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_14); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD14
+					OFF_All_LEDs
+					Red_ON
 					break;
 							
 				case 3:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+					OFF_All_LEDs
+					Green_ON
 					break;
 							
 				case 4:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
+					OFF_All_LEDs
+					Blue_ON
 					break;
 							
 				case 5:	
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_12); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD12
+					OFF_All_LEDs
+					Green_ON
 					break;
 							
 				case 6:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_13); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD13
+					OFF_All_LEDs
+					Yellow_ON
 					break;
 							
 				case 7:
-					GPIO_ResetBits(GPIOD, GPIO_Pin_12|GPIO_Pin_13|GPIO_Pin_14|GPIO_Pin_15); //устанавливаем низкий уровень напряжения 0 на ножку светодиода PD12/13/14/15
-					GPIO_SetBits(GPIOD, GPIO_Pin_15); //устанавливаем высокий уровень напряжения 1 на ножке светодиода PD15
+					OFF_All_LEDs
+					Blue_ON
 					break;
 			}
 		}							

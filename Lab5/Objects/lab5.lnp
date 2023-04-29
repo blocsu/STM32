@@ -1,6 +1,7 @@
 --cpu=Cortex-M4.fp.sp
 ".\objects\main.o"
 ".\User\Lab5_Test.lib"
+".\objects\led_init.o"
 ".\objects\misc.o"
 ".\objects\stm32f4xx_adc.o"
 ".\objects\stm32f4xx_can.o"

@@ -404,6 +404,11 @@
               <FileType>4</FileType>
               <FilePath>.\User\Lab5_Test.lib</FilePath>
             </File>
+            <File>
+              <FileName>LED_init.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\User\LED_init.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

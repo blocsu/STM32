@@ -7,10 +7,10 @@
 
 void usart_ini(void) 
 {
-	GPIO_InitTypeDef GPIO_struct_USART2;
-	USART_InitTypeDef USART_InitStruct;
+	GPIO_InitTypeDef GPIO_struct_USART2; ////Структура для инициализации выводов
+	USART_InitTypeDef USART_InitStruct; //структура инициализирующая USART
 	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //Вк. тактирования вывода по которому будет передавать данные USART
 	
 	GPIO_struct_USART2.GPIO_Pin   = GPIO_Pin_2 | GPIO_Pin_3; //конфигурируем структуру с параметрами на ножках PA2 и PA3
 	GPIO_struct_USART2.GPIO_Mode  = GPIO_Mode_AF; //включаем ножки PA2 и PA3 на режим альтернативной функции
@@ -19,25 +19,25 @@ void usart_ini(void)
 	GPIO_struct_USART2.GPIO_PuPd  = GPIO_PuPd_UP;//включаем подтягивание вверх
 	GPIO_Init(GPIOA, &GPIO_struct_USART2); //инициализируем порт A;
 	
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2);
-	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2);
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource2, GPIO_AF_USART2); //подключение вывода PA2 к USART2 TX
+	GPIO_PinAFConfig(GPIOA, GPIO_PinSource3, GPIO_AF_USART2); //подключение вывода PA3 к USART2 RX
 	
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE);
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART2, ENABLE); //включение тактирования USART2 
 	
-	USART_InitStruct.USART_BaudRate = 9600; // скорость передачи данных должна совпадать с указанной в приложении на компе
+	USART_InitStruct.USART_BaudRate = 115200; // скорость передачи данных должна совпадать с указанной в приложении на компе
   USART_InitStruct.USART_WordLength = USART_WordLength_8b; //количество бит в слове USART которые будет передавать за 1 псылку стандартно 8 но может быть и 9
   USART_InitStruct.USART_StopBits = USART_StopBits_1; //чем больше стопбитов тем выше надёжность, чмем меньше тем выше скорость передачи
   USART_InitStruct.USART_Parity = USART_Parity_No ; //бит чёьности не используется
   USART_InitStruct.USART_Mode = USART_Mode_Rx | USART_Mode_Tx; //резим работы на передачу и на приём
   USART_InitStruct.USART_HardwareFlowControl = USART_HardwareFlowControl_None; //управление потоком не используется
 	
-	USART_Init(USART2, &USART_InitStruct);
-	USART_Cmd(USART2, ENABLE);
+	USART_Init(USART2, &USART_InitStruct); //функция инициализирующая USART2
+	USART_Cmd(USART2, ENABLE); //включаем USART
 	
 	//USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
 	//USART_ITConfig(USART2, USART_IT_TC, ENABLE);
-	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE);
+	USART_ITConfig(USART2, USART_IT_RXNE, ENABLE); // разрешаем прерывания по приёму
 	
-	NVIC_EnableIRQ(USART2_IRQn);
+	NVIC_EnableIRQ(USART2_IRQn); //Включение прерываний от USART
 	
 }

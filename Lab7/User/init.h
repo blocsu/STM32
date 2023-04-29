@@ -3,6 +3,6 @@
 
 #include "stm32f4xx.h"
 
-
+void SetSysClockTo168(void);
 
 #endif /*INIT_H_*/
