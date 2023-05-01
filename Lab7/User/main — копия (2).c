@@ -110,9 +110,7 @@ int main(void) {
 			
 			switch(cmd) {
 			case 0x01:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = data;
-				Send_Buffer_Init(2);			  
+				Send_cmd();			  
 				break;
 
 			case 0x02:
@@ -137,21 +135,24 @@ int main(void) {
 				flag = 1;				
 				break;
 			case 0x06:
-				i = data;			  
+				N = data;
+			  i = N;
 			  flag = 1;				
 				break;
 			case 0x07:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = i;
-				Send_Buffer_Init(2);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, cmd);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, i);
 				break;
 			case 0x08:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = Button_State;
-				Send_Buffer_Init(2);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, cmd);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, Button_State);
 				break;
 		 }
-			RX_count = 0;
+			RX_count--;
 		}
 		
 		if (flag) {
@@ -199,7 +200,7 @@ int main(void) {
 					break;
 			}
 		 }
-		//Test = while_test(decision);
+		Test = while_test(decision);
 		}	
 	}
 

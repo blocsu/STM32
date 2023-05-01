@@ -17,66 +17,67 @@ uint32_t count;
 uint32_t count_size;
 uint8_t TX_Buffer[256];
 
-static uint16_t Button_Press = 0;
-static uint16_t Button_State = 0;
-static uint8_t  Button_Count = 10;
-uint32_t SysTick_CNT = 2;
-static uint8_t Flag = 0;
-
-uint8_t RX_Buffer[256];
+uint8_t RX_Buffer[2];
 static uint8_t RX_wr = 0;
 static uint8_t RX_rd = 0;
 static uint8_t RX_count = 0;
+
+static uint16_t Button_Press = 0;
+static uint16_t Button_State = 0;
+static uint8_t  Button_Count = 10;
 
 uint8_t TestVar;
 uint32_t Test;
 static uint8_t decision[4] = {0, 0, 0, 0};
 
-void USART2_IRQHandler(void) {
-	if (USART_GetITStatus(USART2, USART_IT_TXE) == 1) {
-		USART_ClearITPendingBit(USART2, USART_IT_TXE);
-		
-		if (count == count_size) {
-			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
-			count = 0;
-		}else {
-			USART_SendData(USART2, TX_Buffer[count]);
-			count++;
-		}
-	}
-	// oбработка событи¤ RXNE (приЄма)
-	if (USART_GetITStatus(USART2, USART_IT_RXNE) == 1) { 
-		USART_ClearITPendingBit(USART2, USART_IT_RXNE); //сброшен флаг - очистка бина прерывани¤		
-		RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //прин¤ли байт
-		RX_wr++;
-		RX_count++;		
-	}
+//void USART2_IRQHandler(void) {
+//	if (USART_GetITStatus(USART2, USART_IT_TXE) == 1) {
+//		USART_ClearITPendingBit(USART2, USART_IT_TXE);
+//		
+//		if (count == count_size) {
+//			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
+//			count = 0;
+//		}else {
+//			USART_SendData(USART2, TX_Buffer[count]);
+//			count++;
+//		}
+//	}
+//	// Обработка события RXNE (приёма)
+//	if (USART_GetITStatus(USART2, USART_IT_RXNE) == 1) { 
+//		USART_ClearITPendingBit(USART2, USART_IT_RXNE); //сброшен флаг - очистка бина прерывания
+//		RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //приняли байт
+//    RX_wr ^= 1;		
+//		RX_count++;
+//    		
+//		USART_GetFlagStatus(USART2, USART_FLAG_RXNE);
+//		USART_ClearFlag(USART2, USART_FLAG_RXNE);
+//	}
 
-}
-
-//void Get_cmd(void) {
-//	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }
-//	cmd = USART_ReceiveData(USART2);
-//	
-//	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }  
-//	data = USART_ReceiveData(USART2);
 //}
 
+void Get_cmd(void) {
+	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }
+	cmd = USART_ReceiveData(USART2);
+	
+	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }  
+	data = USART_ReceiveData(USART2);
+}
+
 void Send_cmd(void) {
-	while(USART_GetFlagStatus(USART2, USART_FLAG_TC) == 0) { }
+	while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
 	USART_SendData(USART2, cmd);
 	
-	while(USART_GetFlagStatus(USART2, USART_FLAG_TC) == 0) { }  
+	while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }  
 	USART_SendData(USART2, data);
 }
-void  Send_Buffer_Init(uint32_t data_size){
-	count_size = data_size;
-	
-	USART_SendData(USART2, TX_Buffer[0]);
-	count++;
+//void  Send_Buffer_Init(uint32_t data_size){
+//	count_size = data_size;
+//	
+//	USART_SendData(USART2, TX_Buffer[0]);
+//	count++;
 
-	USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
-}
+//	USART_ITConfig(USART2, USART_IT_TXE, ENABLE);
+//}
 
 int main(void) {
 							
@@ -100,19 +101,13 @@ int main(void) {
 	TestVar = lab7_test_ini("Dotsenko");
 		
 	while(1) {
-		
-		//Get_cmd();
+		//Test = while_test(decision);
+		Get_cmd();
 					
-		if (RX_count > 1) {
-			cmd = RX_Buffer[RX_rd];
-			RX_rd++;
-			data = RX_Buffer[RX_rd];
-			
-			switch(cmd) {
+		switch(cmd) {
 			case 0x01:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = data;
-				Send_Buffer_Init(2);			  
+				Send_cmd();
+			  data = 0;
 				break;
 
 			case 0x02:
@@ -123,7 +118,8 @@ int main(void) {
 					} else i++;
 					N--;
 				}
-				flag = 1;				
+				flag = 1;
+				data = 0;
 				break;
 			
 			case 0x03:
@@ -134,24 +130,27 @@ int main(void) {
 					} else i--;
 					N--;
 				}
-				flag = 1;				
+				flag = 1;
+				data = 0;
 				break;
 			case 0x06:
-				i = data;			  
-			  flag = 1;				
+				N = data;
+			  i = N;
+			  flag = 1;
+				data = 0;
 				break;
 			case 0x07:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = i;
-				Send_Buffer_Init(2);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, cmd);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, i);
 				break;
 			case 0x08:
-				TX_Buffer[0] = cmd;
-			  TX_Buffer[1] = Button_State;
-				Send_Buffer_Init(2);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, cmd);
+				while(USART_GetFlagStatus(USART2, USART_FLAG_TXE) == 0) { }
+	      USART_SendData(USART2, Button_State);
 				break;
-		 }
-			RX_count = 0;
 		}
 		
 		if (flag) {
@@ -198,9 +197,9 @@ int main(void) {
 					Blue_ON
 					break;
 			}
-		 }
-		//Test = while_test(decision);
-		}	
+		}
+
+		}
 	}
 
 	
@@ -217,7 +216,7 @@ void SysTick_Handler(void) {
 			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
 		}
 	}
-	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }	
+	
 	void test_systick(void);
 	
 }

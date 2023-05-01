@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Evgeny Dotsenko, home, LIC=----
+License Information: Evgeny Dotsenko, Home, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
@@ -21,13 +21,12 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\MK\STM32\Lab7\lab7.uvprojx
-Project File Date:  04/28/2023
+C:\MK\STM32\Lab7\lab7.uvprojx
+Project File Date:  04/29/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-compiling main.c...
 User/main.c(1): warning: In file included from...
 ./Pl\stm32f4xx.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
@@ -587,120 +586,174 @@ User/main.c(6): warning: In file included from...
 ./User/LED_init.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 #define Blue_OFF GPIO_ResetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                                            ^
-User/main.c(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//      // <CE><E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><FF> RXNE (<EF><F0><E8><B8><EC><E0>)
-           ^
-User/main.c(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//      // <CE><E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><FF> RXNE (<EF><F0><E8><B8><EC><E0>)
-                                                ^
-User/main.c(42): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//      // <CE><E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><FF> RXNE (<EF><F0><E8><B8><EC><E0>)
-                                                                                   ^
-User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><FF>
+User/main.c(23): warning: no previous extern declaration for non-static variable 'SysTick_CNT' [-Wmissing-variable-declarations]
+uint32_t SysTick_CNT = 2;
+         ^
+User/main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t SysTick_CNT = 2;
+^
+User/main.c(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // o<E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><A4> RXNE (<EF><F0><E8><AA><EC><E0>)
+            ^
+User/main.c(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // o<E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><A4> RXNE (<EF><F0><E8><AA><EC><E0>)
+                                             ^
+User/main.c(47): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // o<E1><F0><E0><E1><EE><F2><EA><E0> <F1><EE><E1><FB><F2><E8><A4> RXNE (<EF><F0><E8><AA><EC><E0>)
+                                                                                ^
+User/main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><A4>                
                                                                   ^
-User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><FF>
+User/main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><A4>                
                                                                                                ^
-User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><FF>
+User/main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><A4>                
                                                                                                                   ^
-User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><FF>
+User/main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><A4>                
                                                                                                                                                ^
-User/main.c(44): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><FF>
+User/main.c(49): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                USART_ClearITPendingBit(USART2, USART_IT_RXNE); //<F1><E1><F0><EE><F8><E5><ED> <F4><EB><E0><E3> - <EE><F7><E8><F1><F2><EA><E0> <E1><E8><ED><E0> <EF><F0><E5><F0><FB><E2><E0><ED><E8><A4>                
                                                                                                                                                                 ^
-User/main.c(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //<EF><F0><E8><ED><FF><EB><E8> <E1><E0><E9><F2>
+User/main.c(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //<EF><F0><E8><ED><A4><EB><E8> <E1><E0><E9><F2>
                                                                 ^
-User/main.c(45): warning: invalid UTF-8 in comment [-Winvalid-utf8]
-//              RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //<EF><F0><E8><ED><FF><EB><E8> <E1><E0><E9><F2>
+User/main.c(50): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //<EF><F0><E8><ED><A4><EB><E8> <E1><E0><E9><F2>
                                                                                              ^
-User/main.c(57): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-        cmd = USART_ReceiveData(USART2);
-            ~ ^~~~~~~~~~~~~~~~~~~~~~~~~
-User/main.c(60): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
-        data = USART_ReceiveData(USART2);
-             ~ ^~~~~~~~~~~~~~~~~~~~~~~~~
-User/main.c(55): warning: no previous prototype for function 'Get_cmd' [-Wmissing-prototypes]
-void Get_cmd(void) {
+User/main.c(50): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //<EF><F0><E8><ED><A4><EB><E8> <E1><E0><E9><F2>
+                                 ~ ^~~~~~~~~~~~~~~~~~~~~~~~~
+User/main.c(35): warning: no previous prototype for function 'USART2_IRQHandler' [-Wmissing-prototypes]
+void USART2_IRQHandler(void) {
      ^
-User/main.c(55): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void Get_cmd(void) {
+User/main.c(35): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void USART2_IRQHandler(void) {
 ^
 static 
-User/main.c(99): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                                OFF_All_LEDs;
-                                            ^
-User/main.c(100): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
-                                Red_ON;
-                                      ^
-User/main.c(181): warning: no newline at end of file [-Wnewline-eof]
+User/main.c(65): warning: no previous prototype for function 'Send_cmd' [-Wmissing-prototypes]
+void Send_cmd(void) {
+     ^
+User/main.c(65): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void Send_cmd(void) {
+^
+static 
+User/main.c(72): warning: no previous prototype for function 'Send_Buffer_Init' [-Wmissing-prototypes]
+void  Send_Buffer_Init(uint32_t data_size){
+      ^
+User/main.c(72): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void  Send_Buffer_Init(uint32_t data_size){
+^
+static 
+User/main.c(150): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+                          TX_Buffer[1] = Button_State;
+                                       ~ ^~~~~~~~~~~~
+User/main.c(208): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // <CE><EF><F0><EE><F1> <EA><ED><EE><EF><EA><E8>
+           ^
+User/main.c(208): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+        // <CE><EF><F0><EE><F1> <EA><ED><EE><EF><EA><E8>
+                                ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                  ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                   ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                     ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                              ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                                                                   ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                                                                        ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                                                                                                                  ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                                                                                                                           ^
+User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
+                                                                                                                                                                                                                                                                                                ^
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
+                                                          ^
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
+                                                                                                           ^
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
+                                                                                                                                        ^
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+                        Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
+                                                                                                                                                                             ^
+User/main.c(224): warning: no newline at end of file [-Wnewline-eof]
         
         ^
-User/main.c(176): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+User/main.c(221): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
+        void test_systick(void);
+             ^
+User/main.c(207): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
 void SysTick_Handler(void) {
      ^
-User/main.c(176): note: declare 'static' if the function is not intended to be used outside of this translation unit
+User/main.c(207): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void SysTick_Handler(void) {
 ^
 static 
-User/main.c(17): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
+User/main.c(16): warning: no previous extern declaration for non-static variable 'count' [-Wmissing-variable-declarations]
 uint32_t count;
+         ^
+User/main.c(16): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint32_t count;
+^
+User/main.c(17): warning: no previous extern declaration for non-static variable 'count_size' [-Wmissing-variable-declarations]
+uint32_t count_size;
          ^
 User/main.c(17): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t count;
-^
-User/main.c(18): warning: no previous extern declaration for non-static variable 'count_size' [-Wmissing-variable-declarations]
 uint32_t count_size;
-         ^
+^
+User/main.c(18): warning: no previous extern declaration for non-static variable 'TX_Buffer' [-Wmissing-variable-declarations]
+uint8_t TX_Buffer[256];
+        ^
 User/main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint32_t count_size;
-^
-User/main.c(19): warning: no previous extern declaration for non-static variable 'TX_Buffer' [-Wmissing-variable-declarations]
-uint8_t TX_Buffer[256];
-        ^
-User/main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 uint8_t TX_Buffer[256];
 ^
-User/main.c(21): warning: no previous extern declaration for non-static variable 'RX_Buffer' [-Wmissing-variable-declarations]
-uint8_t RX_Buffer[2];
-        ^
-User/main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
-uint8_t RX_Buffer[2];
-^
-User/main.c(26): warning: no previous extern declaration for non-static variable 'TestVar' [-Wmissing-variable-declarations]
-uint8_t TestVar;
+User/main.c(26): warning: no previous extern declaration for non-static variable 'RX_Buffer' [-Wmissing-variable-declarations]
+uint8_t RX_Buffer[256];
         ^
 User/main.c(26): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t RX_Buffer[256];
+^
+User/main.c(31): warning: no previous extern declaration for non-static variable 'TestVar' [-Wmissing-variable-declarations]
+uint8_t TestVar;
+        ^
+User/main.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 uint8_t TestVar;
 ^
-User/main.c(27): warning: no previous extern declaration for non-static variable 'Test' [-Wmissing-variable-declarations]
+User/main.c(32): warning: no previous extern declaration for non-static variable 'Test' [-Wmissing-variable-declarations]
 uint32_t Test;
          ^
-User/main.c(27): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+User/main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 uint32_t Test;
 ^
-User/main.c(12): warning: unused variable 'reseive_flag' [-Wunused-variable]
-static uint8_t reseive_flag = 0;
-               ^
-User/main.c(22): warning: unused variable 'RX_wr' [-Wunused-variable]
-static uint8_t RX_wr = 0;
-               ^
-User/main.c(23): warning: unused variable 'RX_rd' [-Wunused-variable]
-static uint8_t RX_rd = 0;
-               ^
-User/main.c(24): warning: unused variable 'RX_count' [-Wunused-variable]
-static uint8_t RX_count = 0;
-               ^
-User/main.c(28): warning: unused variable 'decision' [-Wunused-variable]
+User/main.c(33): warning: unused variable 'decision' [-Wunused-variable]
 static uint8_t decision[4] = {0, 0, 0, 0};
                ^
-179 warnings generated.
+193 warnings generated.
+compiling main.c...
 linking...
-Program Size: Code=3878 RO-data=458 RW-data=4 ZI-data=1640  
-".\Objects\lab7.axf" - 0 Error(s), 179 Warning(s).
+Program Size: Code=7142 RO-data=466 RW-data=276 ZI-data=2168  
+".\Objects\lab7.axf" - 0 Error(s), 193 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -718,18 +771,18 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Target_1
-  C:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
-      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+      Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Build Time Elapsed:  00:00:02
 </pre>
