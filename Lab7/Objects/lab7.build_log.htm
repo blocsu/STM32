@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Evgeny Dotsenko, Home, LIC=----
+License Information: Evgeny Dotsenko, home, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
@@ -21,12 +21,13 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-C:\MK\STM32\Lab7\lab7.uvprojx
-Project File Date:  04/29/2023
+D:\MK\STM32\Lab7\lab7.uvprojx
+Project File Date:  04/28/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
+compiling main.c...
 User/main.c(1): warning: In file included from...
 ./Pl\stm32f4xx.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *              - To use or not the peripheral<92>s drivers in application code(i.e. 
@@ -632,81 +633,71 @@ User/main.c(35): note: declare 'static' if the function is not intended to be us
 void USART2_IRQHandler(void) {
 ^
 static 
-User/main.c(65): warning: no previous prototype for function 'Send_cmd' [-Wmissing-prototypes]
-void Send_cmd(void) {
-     ^
-User/main.c(65): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void Send_cmd(void) {
-^
-static 
-User/main.c(72): warning: no previous prototype for function 'Send_Buffer_Init' [-Wmissing-prototypes]
+User/main.c(78): warning: no previous prototype for function 'Send_Buffer_Init' [-Wmissing-prototypes]
 void  Send_Buffer_Init(uint32_t data_size){
       ^
-User/main.c(72): note: declare 'static' if the function is not intended to be used outside of this translation unit
+User/main.c(78): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void  Send_Buffer_Init(uint32_t data_size){
 ^
 static 
-User/main.c(150): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+User/main.c(153): warning: implicit conversion loses integer precision: 'uint16_t' (aka 'unsigned short') to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
                           TX_Buffer[1] = Button_State;
                                        ~ ^~~~~~~~~~~~
-User/main.c(208): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(211): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         // <CE><EF><F0><EE><F1> <EA><ED><EE><EF><EA><E8>
            ^
-User/main.c(208): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(211): warning: invalid UTF-8 in comment [-Winvalid-utf8]
         // <CE><EF><F0><EE><F1> <EA><ED><EE><EF><EA><E8>
                                 ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                   ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                    ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                 ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                      ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                               ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                                                                    ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                                                                         ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                                                                                                                   ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                                                                                                                            ^
-User/main.c(214): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                 if(new_state != Button_State) { //<C5><F1><EB><E8> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <ED><E5> <F1><EE><E2><EF><E0><E4><E0><E5><F2> <F1> <EF><F0><E5><E4><FB><E4><F3><F9><E8><EC>, <F2><EE> <EF><F0><EE><E2><E0><EB><E8><E2><E0><E5><EC><F1><FF> <E4><E0><EB><FC><F8><E5>
                                                                                                                                                                                                                                                                                                 ^
-User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(220): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                         Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
                                                           ^
-User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(220): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                         Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
                                                                                                            ^
-User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(220): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                         Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
                                                                                                                                         ^
-User/main.c(217): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+User/main.c(220): warning: invalid UTF-8 in comment [-Winvalid-utf8]
                         Button_State = new_state;       //<CF><F0><E8><F0><E0><E2><ED><E8><E2><E0><E5><EC> <F2><E5><EA><F3><F9><E5><E5> <F1><EE><F1><F2><EE><FF><ED><E8><E5> <EF><F0><E5><E4><FB><E4><F3><F9><E5><EC><F3>            
                                                                                                                                                                              ^
-User/main.c(224): warning: no newline at end of file [-Wnewline-eof]
+User/main.c(227): warning: no newline at end of file [-Wnewline-eof]
         
         ^
-User/main.c(221): warning: mixing declarations and code is incompatible with standards before C99 [-Wdeclaration-after-statement]
-        void test_systick(void);
-             ^
-User/main.c(207): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
+User/main.c(210): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
 void SysTick_Handler(void) {
      ^
-User/main.c(207): note: declare 'static' if the function is not intended to be used outside of this translation unit
+User/main.c(210): note: declare 'static' if the function is not intended to be used outside of this translation unit
 void SysTick_Handler(void) {
 ^
 static 
@@ -746,14 +737,16 @@ uint32_t Test;
 User/main.c(32): note: declare 'static' if the variable is not intended to be used outside of this translation unit
 uint32_t Test;
 ^
-User/main.c(33): warning: unused variable 'decision' [-Wunused-variable]
-static uint8_t decision[4] = {0, 0, 0, 0};
+User/main.c(14): warning: unused variable 'data' [-Wunused-variable]
+static uint8_t data;
                ^
-193 warnings generated.
-compiling main.c...
+User/main.c(15): warning: unused variable 'cmd' [-Wunused-variable]
+static uint8_t cmd;
+               ^
+192 warnings generated.
 linking...
-Program Size: Code=7142 RO-data=466 RW-data=276 ZI-data=2168  
-".\Objects\lab7.axf" - 0 Error(s), 193 Warning(s).
+Program Size: Code=7110 RO-data=466 RW-data=276 ZI-data=2184  
+".\Objects\lab7.axf" - 0 Error(s), 192 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -771,18 +764,18 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Target_1
-  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:2.6.3
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
-      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
       Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Build Time Elapsed:  00:00:02
 </pre>

@@ -107,6 +107,7 @@ int main(void) {
 			cmd = RX_Buffer[RX_rd];
 			RX_rd++;
 			data = RX_Buffer[RX_rd];
+			RX_rd++;
 			
 			switch(cmd) {
 			case 0x01:
@@ -152,7 +153,7 @@ int main(void) {
 	      USART_SendData(USART2, Button_State);
 				break;
 		 }
-			RX_count--;
+			RX_count = 0;
 		}
 		
 		if (flag) {

@@ -25,6 +25,8 @@ static uint8_t RX_count = 0;
 static uint16_t Button_Press = 0;
 static uint16_t Button_State = 0;
 static uint8_t  Button_Count = 10;
+uint32_t SysTick_CNT = 1;
+static uint8_t Flag = 0;
 
 uint8_t TestVar;
 uint32_t Test;
@@ -56,11 +58,15 @@ static uint8_t decision[4] = {0, 0, 0, 0};
 //}
 
 void Get_cmd(void) {
-	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }
-	cmd = USART_ReceiveData(USART2);
-	
-	while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }  
-	data = USART_ReceiveData(USART2);
+	while(1) {
+		while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0) { }
+		cmd = USART_ReceiveData(USART2);
+		SysTick_CNT = 1;
+		Flag = 0;
+		while(USART_GetFlagStatus(USART2, USART_FLAG_RXNE) == 0 && Flag == 0) { }  
+		data = USART_ReceiveData(USART2);
+		if (Flag == 0) break;
+	}
 }
 
 void Send_cmd(void) {
@@ -101,7 +107,7 @@ int main(void) {
 	TestVar = lab7_test_ini("Dotsenko");
 		
 	while(1) {
-		//Test = while_test(decision);
+		Test = while_test(decision);
 		Get_cmd();
 					
 		switch(cmd) {
@@ -216,7 +222,7 @@ void SysTick_Handler(void) {
 			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
 		}
 	}
-	
+	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }
 	void test_systick(void);
 	
 }
