@@ -1,4 +1,4 @@
-./objects/main.o: User\main.c Pl\stm32f4xx.h \
+./objects/main.o: User\main.c User\main.h Pl\stm32f4xx.h \
   C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h \
@@ -16,6 +16,6 @@
   Pl\inc\stm32f4xx_usart.h Pl\inc\stm32f4xx_wwdg.h Pl\inc\misc.h \
   Pl\inc\stm32f4xx_cryp.h Pl\inc\stm32f4xx_hash.h Pl\inc\stm32f4xx_rng.h \
   Pl\inc\stm32f4xx_can.h Pl\inc\stm32f4xx_dac.h Pl\inc\stm32f4xx_dcmi.h \
-  Pl\inc\stm32f4xx_fsmc.h User\main.h User\init.h User\timers.h \
-  User\usart.h User\LED_init.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h User\Lab7_Test.h
+  Pl\inc\stm32f4xx_fsmc.h User\init.h User\timers.h User\usart.h \
+  User\LED_init.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  User\Lab7_Test.h

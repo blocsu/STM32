@@ -2,6 +2,12 @@
 #define MAIN_H_
 
 #include "stm32f4xx.h"
+#include "init.h"
+#include "timers.h"
+#include "usart.h"
+#include "LED_init.h"
+#include "stdio.h"
+#include "Lab7_Test.h"
 
 void delay_mc(int n);
 

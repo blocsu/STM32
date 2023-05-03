@@ -17,4 +17,5 @@
   Pl\inc\stm32f4xx_cryp.h Pl\inc\stm32f4xx_hash.h Pl\inc\stm32f4xx_rng.h \
   Pl\inc\stm32f4xx_can.h Pl\inc\stm32f4xx_dac.h Pl\inc\stm32f4xx_dcmi.h \
   Pl\inc\stm32f4xx_fsmc.h User\main.h User\init.h User\timers.h \
-  User\Lab7_Test.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h
+  User\usart.h User\LED_init.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h User\Lab7_Test.h

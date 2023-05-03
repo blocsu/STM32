@@ -39,20 +39,21 @@ void USART2_IRQHandler(void) {
 		if (count == count_size) {
 			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
 			count = 0;
-		}
-		else {
+		}else {
 			USART_SendData(USART2, TX_Buffer[count]);
 			count++;
 		}
 	}
-	
 	// oбработка событи¤ RXNE (приЄма)
 	if (USART_GetITStatus(USART2, USART_IT_RXNE) == 1) { 
 		USART_ClearITPendingBit(USART2, USART_IT_RXNE); //сброшен флаг - очистка бина прерывани¤		
 		RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //прин¤ли байт
 		RX_wr++;
-		if(RX_count++ == 1) { SysTick_CNT = 2; Flag = 0; }
+		RX_count++;
+//    SysTick_CNT = 1;
+//		while(Flag) {}
 	}
+
 }
 
 //void Get_cmd(void) {
@@ -107,10 +108,12 @@ int main(void) {
 	while(1) {
 		
 		//Get_cmd();
-		if(RX_count > 1) {
-			if(Flag == 0) {
-			TX_Buffer[0] = RX_Buffer[RX_rd++];
-			TX_Buffer[1] = RX_Buffer[RX_rd++];
+					
+		if (RX_count > 1) {
+			TX_Buffer[0] = RX_Buffer[RX_rd];
+			RX_rd++;
+			TX_Buffer[1] = RX_Buffer[RX_rd];
+			RX_rd++;
 			
 			switch(TX_Buffer[0]) {
 			case 0x01:
@@ -151,7 +154,6 @@ int main(void) {
 				Send_Buffer_Init(2);
 				break;
 		 }
-		}
 			RX_count = 0;
 		}
 		
@@ -218,9 +220,8 @@ void SysTick_Handler(void) {
 			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
 		}
 	}
-	
-	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }
-	
+	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }	
 	test_systick();
+	
 }
 	

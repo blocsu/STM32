@@ -1,12 +1,4 @@
-#include "stm32f4xx.h"  // Device header
 #include "main.h"
-#include "init.h"
-#include "timers.h"
-#include "usart.h"
-#include "LED_init.h"
-#include "stdio.h"
-#include "Lab7_Test.h"
-
 
 static uint8_t i;
 static uint8_t flag = 0;
@@ -20,7 +12,7 @@ uint8_t TX_Buffer[256];
 static uint16_t Button_Press = 0;
 static uint16_t Button_State = 0;
 static uint8_t  Button_Count = 10;
-uint32_t SysTick_CNT = 2;
+uint32_t SysTick_CNT = 1;
 static uint8_t Flag = 0;
 
 uint8_t RX_Buffer[256];
@@ -39,21 +31,20 @@ void USART2_IRQHandler(void) {
 		if (count == count_size) {
 			USART_ITConfig(USART2, USART_IT_TXE, DISABLE);
 			count = 0;
-		}else {
+		}
+		else {
 			USART_SendData(USART2, TX_Buffer[count]);
 			count++;
 		}
 	}
+	
 	// oбработка событи¤ RXNE (приЄма)
 	if (USART_GetITStatus(USART2, USART_IT_RXNE) == 1) { 
 		USART_ClearITPendingBit(USART2, USART_IT_RXNE); //сброшен флаг - очистка бина прерывани¤		
 		RX_Buffer[RX_wr] = USART_ReceiveData(USART2); //прин¤ли байт
 		RX_wr++;
-		RX_count++;
-//    SysTick_CNT = 1;
-//		while(Flag) {}
+		if(++RX_count == 1) { SysTick_CNT = 1; Flag = 0; }
 	}
-
 }
 
 //void Get_cmd(void) {
@@ -100,60 +91,59 @@ int main(void) {
 	usart_ini();
 				
 	RCC_GetClocksFreq(&RCC_Clocks1);
-			
-	//Send_Buffer_Init(5);
-	
+		
 	TestVar = lab7_test_ini("Dotsenko");
 		
 	while(1) {
 		
 		//Get_cmd();
-					
-		if (RX_count > 1) {
-			TX_Buffer[0] = RX_Buffer[RX_rd];
-			RX_rd++;
-			TX_Buffer[1] = RX_Buffer[RX_rd];
-			RX_rd++;
-			
-			switch(TX_Buffer[0]) {
-			case 0x01:
-				Send_Buffer_Init(2);			  
-				break;
+		if(RX_count > 1) {
+			if(Flag == 0) {
+				TX_Buffer[0] = RX_Buffer[RX_rd++];
+				TX_Buffer[1] = RX_Buffer[RX_rd++];
+				
+				switch(TX_Buffer[0]) {
+				case 0x01:
+					Send_Buffer_Init(2);			  
+					break;
 
-			case 0x02:
-				N = TX_Buffer[1];				  
-				while(N) {
-					if (i == 7) {
-						i = 0;
-					} else i++;
-					N--;
-				}
-				flag = 1;				
-				break;
-			
-			case 0x03:
-				N = TX_Buffer[1];				  
-				while(N) {
-					if (i == 0) {
-						i = 7;
-					} else i--;
-					N--;
-				}
-				flag = 1;				
-				break;
-			case 0x06:
-				i = TX_Buffer[1];			  
-			  flag = 1;				
-				break;
-			case 0x07:				
-			  TX_Buffer[1] = i;
-				Send_Buffer_Init(2);
-				break;
-			case 0x08:				
-			  TX_Buffer[1] = Button_State;
-				Send_Buffer_Init(2);
-				break;
-		 }
+				case 0x02:
+					N = TX_Buffer[1];				  
+					if(N < 8) {
+						while(N) {
+						if (i == 7) {
+							i = 0;
+						} else i++;
+						N--;
+					 }
+					}
+					flag = 1;				
+					break;
+				
+				case 0x03:
+					N = TX_Buffer[1];				  
+					while(N) {
+						if (i == 0) {
+							i = 7;
+						} else i--;
+						N--;
+					}
+					flag = 1;				
+					break;
+				case 0x06:
+					i = TX_Buffer[1];			  
+					flag = 1;				
+					break;
+				case 0x07:				
+					TX_Buffer[1] = i;
+					Send_Buffer_Init(2);
+					break;
+				case 0x08:				
+					TX_Buffer[1] = Button_State;
+					Send_Buffer_Init(2);
+					break;
+			 }
+			}
 			RX_count = 0;
 		}
 		
@@ -220,8 +210,9 @@ void SysTick_Handler(void) {
 			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
 		}
 	}
-	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }	
-	test_systick();
 	
+	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }
+	
+	test_systick();
 }
 	
