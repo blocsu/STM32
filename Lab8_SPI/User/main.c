@@ -2,9 +2,15 @@
 
 static uint8_t flag = 0;
 static uint8_t SPI_data;
+<<<<<<< HEAD
 //uint8_t acc_type = LIS302DL;
 //uint8_t address;
 //static uint8_t data;
+=======
+uint8_t acc_type = LIS302DL;
+//uint8_t address;
+static uint8_t cmd;
+>>>>>>> main
 uint32_t count;
 uint32_t SysTick_CNT = 1;
 static uint8_t Flag = 0;
@@ -40,6 +46,14 @@ void setReg(uint8_t address, uint8_t value){
 	writeData(value);
 	GPIO_SetBits(GPIOE,GPIO_Pin_3);
 }
+	
+	
+uint8_t Accel_Read_ID(void) {
+	uint8_t ctrl = 0x00;
+	return ctrl;
+}
+
+
 
 int main(void) {
 							
@@ -65,6 +79,7 @@ int main(void) {
 	//TestVar = Lab8_ini("Dotsenko");
 		
 	while(1) {
+<<<<<<< HEAD
 		SPI_data = getReg(LIS302DL_OUT_X);
 		if (SPI_data > 10) {
 		Blue_ON; Yellow_OFF;
@@ -84,6 +99,33 @@ int main(void) {
 		//SPI_data = getReg(LIS302DL_OUT_Z);
 		delay_ms(1000);
 						
+=======
+		
+		if (getReg(0x0F) == 0x3F) {
+		Blue_ON;
+		} else Yellow_ON;
+		
+//		SPI_data = getReg(LIS302DL_OUT_X);
+//		if (SPI_data > 10) {
+//		Blue_ON; Yellow_OFF;
+//		} else if (SPI_data < -10) {
+//		Blue_OFF; Yellow_ON;
+//		} else {
+//		Yellow_OFF; Blue_OFF;
+//		}
+//		SPI_data = getReg(LIS302DL_OUT_Y);
+//		if (SPI_data > 10) {
+//		Red_ON; Green_OFF;
+//		} else if (SPI_data < -10) {
+//		Red_OFF; Green_ON;
+//		} else {
+//		Red_OFF; Green_OFF;
+//		}
+//		SPI_data = getReg(LIS302DL_OUT_Z);
+//		delay_ms(100);
+		
+		
+>>>>>>> main
 		//Test = while_test(decision);
 	}	
 }

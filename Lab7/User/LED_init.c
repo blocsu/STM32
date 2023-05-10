@@ -1,4 +1,3 @@
-#include "stm32f4xx.h"
 #include "LED_init.h"
 void LED_init(void) {
 	GPIO_InitTypeDef GPIO_struct_LED; //инициализируем переменную GPIO_struct_LED с типом структуры GPIO_InitTypeDef

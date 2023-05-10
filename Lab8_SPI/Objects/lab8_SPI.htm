@@ -3,9 +3,15 @@
 <title>Static Call Graph - [.\Objects\lab8_SPI.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab8_SPI.axf</H1><HR>
+<<<<<<< HEAD
 <BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Fri May  5 15:14:47 2023
 <BR><P>
 <H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+=======
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Fri May  5 21:34:18 2023
+<BR><P>
+<H3>Maximum Stack Usage =        124 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+>>>>>>> main
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; SPI_ini &rArr; GPIO_Init
 <P>
@@ -245,7 +251,11 @@ Global Symbols
 <P><STRONG><a name="[ab]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[68]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
+<<<<<<< HEAD
 <BR><BR>[Stack]<UL><LI>Max Depth = 148 + Unknown Stack Size
+=======
+<BR><BR>[Stack]<UL><LI>Max Depth = 124 + Unknown Stack Size
+>>>>>>> main
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; SPI_ini &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -631,12 +641,26 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[81]"></a>GPIO_ResetBits</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ResetBits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+=======
+<P><STRONG><a name="[7d]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_ReadInputDataBit
+</UL>
+<BR>[Called By]<UL><LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Handler
+</UL>
+
+<P><STRONG><a name="[82]"></a>GPIO_ResetBits</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ResetBits))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_ResetBits
+</UL>
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+>>>>>>> main
 </UL>
 
 <P><STRONG><a name="[76]"></a>GPIO_SetBits</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_SetBits))
@@ -644,11 +668,19 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<<<<<<< HEAD
 <LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 </UL>
 
 <P><STRONG><a name="[7f]"></a>GPIO_ToggleBits</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ToggleBits))
+=======
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+</UL>
+
+<P><STRONG><a name="[80]"></a>GPIO_ToggleBits</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ToggleBits))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_ToggleBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
@@ -676,7 +708,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[86]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 354 bytes, Stack size 32 bytes, stm32f4xx_rcc.o(.text.RCC_GetClocksFreq))
+=======
+<P><STRONG><a name="[87]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 354 bytes, Stack size 32 bytes, stm32f4xx_rcc.o(.text.RCC_GetClocksFreq))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RCC_GetClocksFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -691,19 +727,31 @@ Global Symbols
 <P><STRONG><a name="[88]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f4xx_spi.o(.text.SPI_I2S_GetFlagStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_I2S_GetFlagStatus
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+=======
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+>>>>>>> main
 </UL>
 
 <P><STRONG><a name="[8a]"></a>SPI_I2S_ReceiveData</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, stm32f4xx_spi.o(.text.SPI_I2S_ReceiveData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SPI_I2S_ReceiveData
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+=======
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+>>>>>>> main
 </UL>
 
 <P><STRONG><a name="[89]"></a>SPI_I2S_SendData</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_spi.o(.text.SPI_I2S_SendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_I2S_SendData
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+=======
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+>>>>>>> main
 </UL>
 
 <P><STRONG><a name="[78]"></a>SPI_Init</STRONG> (Thumb, 104 bytes, Stack size 12 bytes, stm32f4xx_spi.o(.text.SPI_Init))
@@ -733,16 +781,31 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[83]"></a>SetSysClockTo168</STRONG> (Thumb, 254 bytes, Stack size 4 bytes, init.o(.text.SetSysClockTo168))
+=======
+<P><STRONG><a name="[84]"></a>SetSysClockTo168</STRONG> (Thumb, 254 bytes, Stack size 4 bytes, init.o(.text.SetSysClockTo168))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SetSysClockTo168
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, main.o(.text.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[84]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 302 bytes, Stack size 24 bytes, system_stm32f4xx.o(.text.SystemCoreClockUpdate))
+=======
+<P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 166 bytes, Stack size 16 bytes, main.o(.text.SysTick_Handler))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SysTick_Handler &rArr; GPIO_ReadInputDataBit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
+</UL>
+<P><STRONG><a name="[85]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 302 bytes, Stack size 24 bytes, system_stm32f4xx.o(.text.SystemCoreClockUpdate))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SystemCoreClockUpdate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -754,6 +817,7 @@ Global Symbols
 <P><STRONG><a name="[27]"></a>TIM3_IRQHandler</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, timers.o(.text.TIM3_IRQHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = TIM3_IRQHandler &rArr; TIM_GetITStatus
 </UL>
+<<<<<<< HEAD
 <BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ToggleBits
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearITPendingBit
 <LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
@@ -761,17 +825,31 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[7e]"></a>TIM_ClearITPendingBit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32f4xx_tim.o(.text.TIM_ClearITPendingBit))
+=======
+<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ToggleBits
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ClearITPendingBit
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_GetITStatus
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
+</UL>
+<P><STRONG><a name="[7f]"></a>TIM_ClearITPendingBit</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, stm32f4xx_tim.o(.text.TIM_ClearITPendingBit))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TIM_ClearITPendingBit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[7d]"></a>TIM_GetITStatus</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, stm32f4xx_tim.o(.text.TIM_GetITStatus))
+=======
+<P><STRONG><a name="[7e]"></a>TIM_GetITStatus</STRONG> (Thumb, 90 bytes, Stack size 12 bytes, stm32f4xx_tim.o(.text.TIM_GetITStatus))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = TIM_GetITStatus
 </UL>
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[87]"></a>delay_ms</STRONG> (Thumb, 26 bytes, Stack size 4 bytes, main.o(.text.delay_ms))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = delay_ms
 </UL>
@@ -784,10 +862,19 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+=======
+<P><STRONG><a name="[81]"></a>getReg</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, main.o(.text.getReg))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = getReg &rArr; writeData &rArr; SPI_I2S_SendData
+</UL>
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+>>>>>>> main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[69]"></a>main</STRONG> (Thumb, 350 bytes, Stack size 56 bytes, main.o(.text.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = main &rArr; SPI_ini &rArr; GPIO_Init
 </UL>
@@ -801,30 +888,61 @@ Global Symbols
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;delay_ms
+=======
+<P><STRONG><a name="[69]"></a>main</STRONG> (Thumb, 118 bytes, Stack size 32 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = main &rArr; SPI_ini &rArr; GPIO_Init
+</UL>
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo168
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_init
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+>>>>>>> main
 <LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[85]"></a>setReg</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, main.o(.text.setReg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setReg &rArr; writeData &rArr; SPI_I2S_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
 <LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+=======
+<P><STRONG><a name="[86]"></a>setReg</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, main.o(.text.setReg))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setReg &rArr; writeData &rArr; SPI_I2S_SendData
+</UL>
+<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+>>>>>>> main
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
+<<<<<<< HEAD
 <P><STRONG><a name="[82]"></a>writeData</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, main.o(.text.writeData))
+=======
+<P><STRONG><a name="[83]"></a>writeData</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, main.o(.text.writeData))
+>>>>>>> main
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = writeData &rArr; SPI_I2S_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_ReceiveData
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
 <LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
 </UL>
+<<<<<<< HEAD
 <BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+=======
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
+>>>>>>> main
 </UL>
 
 <P><STRONG><a name="[63]"></a>_fp_init</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, fpinit.o(x$fpl$fpinit))
