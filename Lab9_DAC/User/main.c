@@ -20,7 +20,7 @@ int main(void) {
 	
 	DAC_ini();
 	
-	DAC_SetChannel1Data(DAC_Align_12b_R, 1365);
+	DAC_SetChannel1Data(DAC_Align_12b_R, 2730);
 				
 	RCC_GetClocksFreq(&RCC_Clocks1);
 		
