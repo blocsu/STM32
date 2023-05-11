@@ -424,6 +424,16 @@
               <FileType>5</FileType>
               <FilePath>.\User\DAC.h</FilePath>
             </File>
+            <File>
+              <FileName>Lab9_Test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\Lab9_Test.h</FilePath>
+            </File>
+            <File>
+              <FileName>Lab9_Test.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\User\Lab9_Test.lib</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

@@ -5,6 +5,7 @@
 ".\objects\usart.o"
 ".\objects\led_init.o"
 ".\objects\dac.o"
+".\User\Lab9_Test.lib"
 ".\objects\misc.o"
 ".\objects\stm32f4xx_adc.o"
 ".\objects\stm32f4xx_can.o"

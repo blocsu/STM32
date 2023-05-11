@@ -17,4 +17,5 @@
   Pl\inc\stm32f4xx_cryp.h Pl\inc\stm32f4xx_hash.h Pl\inc\stm32f4xx_rng.h \
   Pl\inc\stm32f4xx_can.h Pl\inc\stm32f4xx_dac.h Pl\inc\stm32f4xx_dcmi.h \
   Pl\inc\stm32f4xx_fsmc.h User\init.h User\DAC.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h User\Lab9_Test.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h

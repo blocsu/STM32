@@ -22,7 +22,7 @@ Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
 D:\MK\STM32\Lab9_DAC\Lab9_DAC.uvprojx
-Project File Date:  05/10/2023
+Project File Date:  05/11/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
@@ -403,16 +403,12 @@ User/main.c(1): warning: In file included from...
 ./Pl\stm32f4xx.h(23): warning: invalid UTF-8 in comment [-Winvalid-utf8]
   *           - Macros to access peripheral<92>s registers hardware
                                            ^
-User/main.c(37): warning: no previous prototype for function 'SysTick_Handler' [-Wmissing-prototypes]
-void SysTick_Handler(void) {
-     ^
-User/main.c(37): note: declare 'static' if the function is not intended to be used outside of this translation unit
-void SysTick_Handler(void) {
-^
-static 
+User/main.c(37): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//                      DAC_SetChannel1Data(DAC_Align_12b_R, data[i]);//0.2 * 4095/3 <E8><EB><E8> (0.2/3.3*4095)
+                                                                                     ^
 82 warnings generated.
 linking...
-Program Size: Code=2424 RO-data=456 RW-data=8 ZI-data=1640  
+Program Size: Code=5848 RO-data=468 RW-data=36 ZI-data=21848  
 ".\Objects\Lab9_DAC.axf" - 0 Error(s), 82 Warning(s).
 
 <h2>Software Packages used:</h2>
