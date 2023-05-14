@@ -3,9 +3,9 @@
 void DAC_ini(void) 
 {
 	GPIO_InitTypeDef GPIO_struct_DAC; ////Структура для инициализации выводов
-	DAC_InitTypeDef DAC_InitStruct; //структура инициализирующая USART
+	DAC_InitTypeDef DAC_InitStruct; //структура инициализирующая DAC
 	
-	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //Вк. тактирования вывода по которому будет передавать данные USART
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE); //Вк. тактирования вывода по которому будет передавать данные DAC 
 	
 	GPIO_struct_DAC.GPIO_Pin   = GPIO_Pin_4; //конфигурируем структуру с параметрами на ножке PA4
 	GPIO_struct_DAC.GPIO_Mode  = GPIO_Mode_AF; //включаем ножку PA4 в режим альтернативной функции

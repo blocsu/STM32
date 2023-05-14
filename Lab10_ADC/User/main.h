@@ -11,11 +11,11 @@
 #include "stdio.h"
 #include "Lab10_test.h"
 
-void delay_ms(int n);
+//void delay_ms(int n);
 
-void delay_ms(int n)
-{
-while(n > 0) n--;
-}
+//void delay_ms(int n)
+//{
+//while(n > 0) n--;
+//}
 
 #endif /*MAIN_H_*/

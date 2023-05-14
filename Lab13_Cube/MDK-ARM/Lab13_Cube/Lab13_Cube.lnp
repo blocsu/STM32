@@ -1,0 +1,27 @@
+--cpu=Cortex-M4.fp.sp
+"lab13_cube\startup_stm32f407xx.o"
+"lab13_cube\main.o"
+"lab13_cube\stm32f4xx_it.o"
+"lab13_cube\stm32f4xx_hal_msp.o"
+"..\Core\Inc\Test.lib"
+"lab13_cube\stm32f4xx_hal_rng.o"
+"lab13_cube\stm32f4xx_hal_rcc.o"
+"lab13_cube\stm32f4xx_hal_rcc_ex.o"
+"lab13_cube\stm32f4xx_hal_flash.o"
+"lab13_cube\stm32f4xx_hal_flash_ex.o"
+"lab13_cube\stm32f4xx_hal_flash_ramfunc.o"
+"lab13_cube\stm32f4xx_hal_gpio.o"
+"lab13_cube\stm32f4xx_hal_dma_ex.o"
+"lab13_cube\stm32f4xx_hal_dma.o"
+"lab13_cube\stm32f4xx_hal_pwr.o"
+"lab13_cube\stm32f4xx_hal_pwr_ex.o"
+"lab13_cube\stm32f4xx_hal_cortex.o"
+"lab13_cube\stm32f4xx_hal.o"
+"lab13_cube\stm32f4xx_hal_exti.o"
+"lab13_cube\stm32f4xx_hal_tim.o"
+"lab13_cube\stm32f4xx_hal_tim_ex.o"
+"lab13_cube\system_stm32f4xx.o"
+--strict --scatter "Lab13_Cube\Lab13_Cube.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "Lab13_Cube.map" -o Lab13_Cube\Lab13_Cube.axf
