@@ -11,11 +11,21 @@
 #include "stdio.h"
 #include "Lab10_test.h"
 
+static uint16_t delay_count=0;
+
 //void delay_ms(int n);
 
 //void delay_ms(int n)
 //{
 //while(n > 0) n--;
 //}
+
+void delay_ms(uint16_t delay_temp);
+void delay_ms(uint16_t delay_temp)
+{
+	delay_count = delay_temp;
+	
+	while(delay_count){}
+}
 
 #endif /*MAIN_H_*/

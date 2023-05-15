@@ -19,7 +19,7 @@ void ADC_IRQHandler(void)
 {
 	ADC_ClearFlag(ADC1, ADC_FLAG_EOC);
 	ADC_result = ADC_GetConversionValue(ADC1);
-	Buffer[i] = 300 * (ADC_result * 100) / 40950;
+	Buffer[i] = 330 * (ADC_result * 100) / 40950;
 	if(++i == 5000) i = 0;
 }
 
@@ -70,15 +70,12 @@ int main(void) {
 	
 void SysTick_Handler(void) {
 	//—читываем данные
+	ADC_SoftwareStartConv(ADC1);
 		
 //	if((i += 35) > 9000) i = 2000;	//все значени€ увеличены в 10 раз, чтобы уйти от дробной части в формуле ниже
 //	DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)((i * 4095 + 15000)/30000));	
 		
-	if(SysTick_CNT) { 
-		ADC_SoftwareStartConv(ADC1);
-		
-		if(--SysTick_CNT == 0) Flag = 1; 
-	}
+	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }
 	
 	lab10_systick();
 }

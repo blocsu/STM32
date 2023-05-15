@@ -9,7 +9,7 @@ void ADC_ini(void)
 	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
 	
 	//Настраиваем порт как аналоговый
-	GPIO_Init_user.GPIO_Pin = GPIO_Pin_4;
+	GPIO_Init_user.GPIO_Pin = GPIO_Pin_0;
 	GPIO_Init_user.GPIO_Mode = GPIO_Mode_AN;
 	GPIO_Init_user.GPIO_Speed = GPIO_Speed_2MHz;
 	GPIO_Init_user.GPIO_OType = GPIO_OType_PP;
@@ -43,7 +43,7 @@ void ADC_ini(void)
 	ADC_Init(ADC1, &ADC_InitType);
 	
 	//Пишем с какого канала читать
-	ADC_RegularChannelConfig(ADC1, ADC_Channel_4, 1, ADC_SampleTime_56Cycles);
+	ADC_RegularChannelConfig(ADC1, ADC_Channel_0, 1, ADC_SampleTime_56Cycles);
 	
 	//Включаем прерывания
 	NVIC_EnableIRQ(ADC_IRQn);
