@@ -2,15 +2,11 @@
 
 static uint8_t flag = 0;
 static uint8_t SPI_data;
-<<<<<<< HEAD
+
 //uint8_t acc_type = LIS302DL;
 //uint8_t address;
-//static uint8_t data;
-=======
-uint8_t acc_type = LIS302DL;
-//uint8_t address;
 static uint8_t cmd;
->>>>>>> main
+
 uint32_t count;
 uint32_t SysTick_CNT = 1;
 static uint8_t Flag = 0;
@@ -79,7 +75,7 @@ int main(void) {
 	//TestVar = Lab8_ini("Dotsenko");
 		
 	while(1) {
-<<<<<<< HEAD
+
 		SPI_data = getReg(LIS302DL_OUT_X);
 		if (SPI_data > 10) {
 		Blue_ON; Yellow_OFF;
@@ -99,7 +95,7 @@ int main(void) {
 		//SPI_data = getReg(LIS302DL_OUT_Z);
 		delay_ms(1000);
 						
-=======
+
 		
 		if (getReg(0x0F) == 0x3F) {
 		Blue_ON;
@@ -125,7 +121,7 @@ int main(void) {
 //		delay_ms(100);
 		
 		
->>>>>>> main
+
 		//Test = while_test(decision);
 	}	
 }
