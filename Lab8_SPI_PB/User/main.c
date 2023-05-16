@@ -1,10 +1,11 @@
 #include "main.h"
 
 static uint8_t flag = 0;
-static int8_t SPI_data[3];
+static int8_t SPI_data;
 
 //uint8_t acc_type = LIS302DL;
 //uint8_t address;
+uint8_t data;
 static uint8_t cmd;
 static uint8_t ID;
 uint32_t count;
@@ -12,7 +13,7 @@ uint32_t SysTick_CNT = 1;
 static uint8_t Flag = 0;
 
 
-uint8_t TestVar;
+uint8_t ver[2] = {0, 0};
 uint32_t Test;
 static uint8_t decision[4] = {0, 0, 0, 0};
 
@@ -72,7 +73,7 @@ int main(void) {
 				
 	RCC_GetClocksFreq(&RCC_Clocks1);
 		
-	//TestVar = Lab8_ini("Dotsenko");
+	Lab8_ini(LIS302DL);
 	
 	ID = Accel_Read_ID();
 		
@@ -103,29 +104,34 @@ int main(void) {
 //		Blue_ON;
 //		} else Yellow_ON;
 		
-		SPI_data[0] = getReg(LIS302DL_OUT_X);
-		if (SPI_data[0] > 10) {
+		SPI_data = getReg(LIS302DL_OUT_X);
+		if (SPI_data > 45) {
 		Blue_ON; Yellow_OFF;
-		} else if (SPI_data[0] < -10) {
+		} else if (SPI_data < -45) {
 		Blue_OFF; Yellow_ON;
 		} else {
 		Yellow_OFF; Blue_OFF;
 		}
-		SPI_data[1] = getReg(LIS302DL_OUT_Y);
-		if (SPI_data[1] > 10) {
+		SPI_data = getReg(LIS302DL_OUT_Y);
+		if (SPI_data > 45) {
 		Red_ON; Green_OFF;
-		} else if (SPI_data[1] < -10) {
+		} else if (SPI_data < -45) {
 		Red_OFF; Green_ON;
 		} else {
 		Red_OFF; Green_OFF;
 		}
-		SPI_data[2] = getReg(LIS302DL_OUT_Z);
-		delay_ms(100);
+//		SPI_data = getReg(LIS302DL_OUT_Z);
+//		delay_ms(100);
 		
 		
 		
 
-		//Test = while_test(decision);
+		Test = Lab8_while();
+		
+		Lab8_data_out(cmd);
+		Lab8_data_in(SPI_data);
+		get_decision(decision);
+		get_version(ver);
 	}	
 }
 	

@@ -8,7 +8,7 @@
 #include "LED_init.h"
 #include "SPI.h"
 //#include "stdio.h"
-//#include "Lab8_Test.h"
+#include "Lab8_Test.h"
 
 void delay_ms(int n);
 
