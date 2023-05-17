@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\Objects\lab8_SPI_PB.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\lab8_SPI_PB.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Tue May 16 21:18:32 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6190004: Last Updated: Wed May 17 11:43:54 2023
 <BR><P>
-<H3>Maximum Stack Usage =        148 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        156 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 __rt_entry_main &rArr; main &rArr; SPI_ini &rArr; GPIO_Init
 <P>
@@ -245,7 +245,7 @@ Global Symbols
 <P><STRONG><a name="[ba]"></a>__rt_entry_postsh_1</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$00000009))
 
 <P><STRONG><a name="[68]"></a>__rt_entry_main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __rtentry2.o(.ARM.Collect$$rtentry$$0000000D))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148 + Unknown Stack Size
+<BR><BR>[Stack]<UL><LI>Max Depth = 156 + Unknown Stack Size
 <LI>Call Chain = __rt_entry_main &rArr; main &rArr; SPI_ini &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -577,7 +577,7 @@ Global Symbols
 
 <P><STRONG><a name="[bd]"></a>HashFAQ6</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, lab8_test.o(.text), UNUSED)
 
-<P><STRONG><a name="[8e]"></a>Lab8_ini</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lab8_test.o(.text))
+<P><STRONG><a name="[8f]"></a>Lab8_ini</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, lab8_test.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
@@ -585,8 +585,8 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>Lab8_data_out</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, lab8_test.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[88]"></a>Lab8_data_out</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, lab8_test.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 </UL>
 
 <P><STRONG><a name="[73]"></a>LIS3DSH_LEDs</STRONG> (Thumb, 370 bytes, Stack size 0 bytes, lab8_test.o(.text))
@@ -683,11 +683,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 </UL>
 
-<P><STRONG><a name="[88]"></a>GPIO_ResetBits</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ResetBits))
+<P><STRONG><a name="[89]"></a>GPIO_ResetBits</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_gpio.o(.text.GPIO_ResetBits))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GPIO_ResetBits
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 </UL>
 
@@ -696,7 +696,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 <LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 </UL>
 
@@ -728,7 +728,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
 </UL>
 
-<P><STRONG><a name="[8d]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 354 bytes, Stack size 32 bytes, stm32f4xx_rcc.o(.text.RCC_GetClocksFreq))
+<P><STRONG><a name="[8e]"></a>RCC_GetClocksFreq</STRONG> (Thumb, 354 bytes, Stack size 32 bytes, stm32f4xx_rcc.o(.text.RCC_GetClocksFreq))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = RCC_GetClocksFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -743,19 +743,19 @@ Global Symbols
 <P><STRONG><a name="[93]"></a>SPI_I2S_GetFlagStatus</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, stm32f4xx_spi.o(.text.SPI_I2S_GetFlagStatus))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_I2S_GetFlagStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 
 <P><STRONG><a name="[95]"></a>SPI_I2S_ReceiveData</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, stm32f4xx_spi.o(.text.SPI_I2S_ReceiveData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SPI_I2S_ReceiveData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 
 <P><STRONG><a name="[94]"></a>SPI_I2S_SendData</STRONG> (Thumb, 20 bytes, Stack size 8 bytes, stm32f4xx_spi.o(.text.SPI_I2S_SendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SPI_I2S_SendData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+<BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 
 <P><STRONG><a name="[80]"></a>SPI_Init</STRONG> (Thumb, 104 bytes, Stack size 12 bytes, stm32f4xx_spi.o(.text.SPI_Init))
@@ -785,7 +785,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8a]"></a>SetSysClockTo168</STRONG> (Thumb, 254 bytes, Stack size 4 bytes, init.o(.text.SetSysClockTo168))
+<P><STRONG><a name="[8b]"></a>SetSysClockTo168</STRONG> (Thumb, 254 bytes, Stack size 4 bytes, init.o(.text.SetSysClockTo168))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SetSysClockTo168
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -794,7 +794,7 @@ Global Symbols
 <P><STRONG><a name="[9]"></a>SysTick_Handler</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, main.o(.text.SysTick_Handler))
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
-<P><STRONG><a name="[8b]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 302 bytes, Stack size 24 bytes, system_stm32f4xx.o(.text.SystemCoreClockUpdate))
+<P><STRONG><a name="[8c]"></a>SystemCoreClockUpdate</STRONG> (Thumb, 302 bytes, Stack size 24 bytes, system_stm32f4xx.o(.text.SystemCoreClockUpdate))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SystemCoreClockUpdate
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
@@ -824,59 +824,59 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_IRQHandler
 </UL>
 
-<P><STRONG><a name="[78]"></a>getReg</STRONG> (Thumb, 88 bytes, Stack size 24 bytes, main.o(.text.getReg))
+<P><STRONG><a name="[78]"></a>getReg</STRONG> (Thumb, 96 bytes, Stack size 24 bytes, main.o(.text.getReg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = getReg &rArr; writeData &rArr; SPI_I2S_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_data_out
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accel_Read_ID
 </UL>
 
-<P><STRONG><a name="[69]"></a>main</STRONG> (Thumb, 436 bytes, Stack size 56 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = main &rArr; SPI_ini &rArr; GPIO_Init
+<P><STRONG><a name="[69]"></a>main</STRONG> (Thumb, 436 bytes, Stack size 64 bytes, main.o(.text.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = main &rArr; SPI_ini &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_version
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_decision
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_data_in
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_data_out
 <LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_while
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_ini
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_data_in
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Lab8_ini
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_GetClocksFreq
 <LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_ini
-<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo168
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemCoreClockUpdate
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SetSysClockTo168
 <LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_init
 <LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Accel_Read_ID
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 <LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTick_Config
 </UL>
 <BR>[Called By]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[8c]"></a>setReg</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, main.o(.text.setReg))
+<P><STRONG><a name="[8d]"></a>setReg</STRONG> (Thumb, 58 bytes, Stack size 24 bytes, main.o(.text.setReg))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = setReg &rArr; writeData &rArr; SPI_I2S_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_SetBits
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ResetBits
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;writeData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[89]"></a>writeData</STRONG> (Thumb, 92 bytes, Stack size 16 bytes, main.o(.text.writeData))
+<P><STRONG><a name="[8a]"></a>writeData</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, main.o(.text.writeData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = writeData &rArr; SPI_I2S_SendData
 </UL>
 <BR>[Calls]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_ReceiveData
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_SendData
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SPI_I2S_GetFlagStatus
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
+<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setReg
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getReg
 </UL>
 
