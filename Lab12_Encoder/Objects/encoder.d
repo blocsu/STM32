@@ -1,5 +1,4 @@
-./objects/stm32f4xx_rng.o: Pl\src\stm32f4xx_rng.c Pl\inc\stm32f4xx_rng.h \
-  Pl\stm32f4xx.h \
+./objects/encoder.o: User\encoder.c User\encoder.h Pl\stm32f4xx.h \
   C:\Users\Admin\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Users\Admin\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h \
@@ -15,5 +14,6 @@
   Pl\inc\stm32f4xx_sdio.h Pl\inc\stm32f4xx_spi.h \
   Pl\inc\stm32f4xx_syscfg.h Pl\inc\stm32f4xx_tim.h \
   Pl\inc\stm32f4xx_usart.h Pl\inc\stm32f4xx_wwdg.h Pl\inc\misc.h \
-  Pl\inc\stm32f4xx_cryp.h Pl\inc\stm32f4xx_hash.h Pl\inc\stm32f4xx_can.h \
-  Pl\inc\stm32f4xx_dac.h Pl\inc\stm32f4xx_dcmi.h Pl\inc\stm32f4xx_fsmc.h
+  Pl\inc\stm32f4xx_cryp.h Pl\inc\stm32f4xx_hash.h Pl\inc\stm32f4xx_rng.h \
+  Pl\inc\stm32f4xx_can.h Pl\inc\stm32f4xx_dac.h Pl\inc\stm32f4xx_dcmi.h \
+  Pl\inc\stm32f4xx_fsmc.h
