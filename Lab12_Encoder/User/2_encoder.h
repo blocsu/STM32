@@ -11,4 +11,7 @@
 
 void encoder_ini(void);
 
+void Systick_Enc(void);
+uint8_t getEnc_Counter(void);
+
 #endif /*ENCODER_H_*/

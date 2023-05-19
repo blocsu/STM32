@@ -1,7 +1,7 @@
 Dependencies for Project 'Lab12_Encoder', Target 'Target 1': (DO NOT MODIFY !)
 CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\User\main.c)(0x64649BE1)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./User -I ./Pl -I ./Pl/inc -I ./Pl/src -I ./RTE -I ./RTE/Device -I ./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_-o ./objects/main.o -MD)
-I (User\main.h)(0x64649977)
+F (.\User\main.c)(0x64661D79)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./User -I ./Pl -I ./Pl/inc -I ./Pl/src -I ./RTE -I ./RTE/Device -I ./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_-o ./objects/main.o -MD)
+I (User\main.h)(0x6464C3CF)
 I (Pl\stm32f4xx.h)(0x6461B5FE)
 I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F831E)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888148)
@@ -38,11 +38,11 @@ I (Pl\inc\stm32f4xx_dac.h)(0x645B3138)
 I (Pl\inc\stm32f4xx_dcmi.h)(0x645B3138)
 I (Pl\inc\stm32f4xx_fsmc.h)(0x645B3138)
 I (User\init.h)(0x645B3138)
-I (User\DAC.h)(0x645B3138)
-I (User\ADC.h)(0x645E1573)
+I (User\LED_init.h)(0x645B3138)
+I (User\encoder.h)(0x646616C9)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdio.h)(0x63888148)
 I (User\Lab12_Test.h)(0x583EE707)
-F (.\User\main.h)(0x64649977)()
+F (.\User\main.h)(0x6464C3CF)()
 F (.\User\init.c)(0x6461B619)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./User -I ./Pl -I ./Pl/inc -I ./Pl/src -I ./RTE -I ./RTE/Device -I ./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_-o ./objects/init.o -MD)
 I (User\init.h)(0x645B3138)
 I (Pl\stm32f4xx.h)(0x6461B5FE)
@@ -269,6 +269,44 @@ I (Pl\inc\stm32f4xx_fsmc.h)(0x645B3138)
 F (.\User\ADC.h)(0x645E1573)()
 F (.\User\Lab12_Test.h)(0x583EE707)()
 F (.\User\Lab12_Test.lib)(0x583EE751)()
+F (.\User\encoder.c)(0x646615B5)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./User -I ./Pl -I ./Pl/inc -I ./Pl/src -I ./RTE -I ./RTE/Device -I ./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_-o ./objects/encoder.o -MD)
+I (User\encoder.h)(0x646616C9)
+I (Pl\stm32f4xx.h)(0x6461B5FE)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\core_cm4.h)(0x626F831E)
+I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x63888148)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_version.h)(0x626F831E)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_compiler.h)(0x626F831E)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\cmsis_armclang.h)(0x626F831E)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include\mpu_armv7.h)(0x626F831E)
+I (C:\Users\Evgen\AppData\Local\Arm\Packs\Keil\STM32F4xx_DFP\2.17.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x6374903A)
+I (Pl\stm32f4xx_conf.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_adc.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_crc.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_dbgmcu.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_dma.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_exti.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_flash.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_gpio.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_i2c.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_iwdg.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_pwr.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_rcc.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_rtc.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_sdio.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_spi.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_syscfg.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_tim.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_usart.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_wwdg.h)(0x645B3138)
+I (Pl\inc\misc.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_cryp.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_hash.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_rng.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_can.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_dac.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_dcmi.h)(0x645B3138)
+I (Pl\inc\stm32f4xx_fsmc.h)(0x645B3138)
+F (.\User\encoder.h)(0x646616C9)()
 F (.\Pl\src\misc.c)(0x645B3138)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-D__EVAL -gdwarf-4 -O0 -ffunction-sections -Weverything -Wno-packed -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ./User -I ./Pl -I ./Pl/inc -I ./Pl/src -I ./RTE -I ./RTE/Device -I ./RTE/Device/STM32F407VGTx-I./RTE/_Target_1-IC:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="538" -D_RTE_ -DSTM32F407xx -D_RTE_-o ./objects/misc.o -MD)
 I (Pl\inc\misc.h)(0x645B3138)
 I (Pl\stm32f4xx.h)(0x6461B5FE)

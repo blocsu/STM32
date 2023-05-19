@@ -1,121 +1,142 @@
  #include "main.h"
  
-static uint32_t SysTick_CNT = 7000;
+static uint32_t SysTick_CNT = 10;
 static uint8_t Flag = 0;
-static uint16_t min=0, max=0, period=0;
-static uint16_t ADC_result;
-static uint16_t Buffer[7000];
-static uint16_t count = 0;
-static uint16_t start = 0;
-static uint16_t stop = 0;
-static uint16_t i = 0;
-static uint8_t variant_num;
+uint8_t new_state_A = 1;
+uint8_t new_state_B = 1;
+uint8_t enc_a=1, enc_b=1;
+int32_t count_a=0, count_b=0;
+uint8_t M=0, encoder_state=0;
+uint8_t cnt=4;
 static uint32_t Test;
 
-uint16_t min_mv(void);
-uint16_t max_mv(void);
-uint16_t period_ms(void);
-
-uint16_t min_mv(void) {
-	min = Buffer[0];    
-	for(uint16_t j=0; j < sizeof(Buffer)/2; j++) {
-			if(Buffer[j] < min) {
-					min = Buffer[j];
-			}
-	}
-	return min;
-}
-
-uint16_t max_mv(void) {
-	max = Buffer[0];    
-	for(uint16_t j=0; j < sizeof(Buffer)/2; j++) {
-			if(Buffer[j] > max) {
-					max = Buffer[j];
-			}
-	}
-	return max;
-}
-
-uint16_t period_ms(void) {
-	for(uint16_t j=0; j < sizeof(Buffer)/2; j++) {
-		if(min - Buffer[j] < 10) {
-	 //if(Buffer[j] == min) {
-		 start = j;
-		 for(++j; j < sizeof(Buffer)/2; j++) {
-			 if(min - Buffer[j] < 10) stop = j;
-			 //if(Buffer[j] == min) stop = j;
-		 }
-	 }
-	 period = stop - start;
-	}
-	return period;
-}
+static uint16_t Button_Press = 0;
+static uint16_t Button_State = 0;
+static uint8_t  Button_Count = 10;
 
 void SysTick_Handler(void);
 
-//Функция прерывания
-void ADC_IRQHandler(void);
-void ADC_IRQHandler(void)
-{
-	ADC_ClearFlag(ADC1, ADC_FLAG_EOC);
-	ADC_result = ADC_GetConversionValue(ADC1);
-	Buffer[i] = 330 * (ADC_result * 100) / 40950;
-	i++;
-	if(i > 4999) i= 0;
-}
 
 int main(void) {
 							
-	RCC_ClocksTypeDef RCC_Clocks1;
-	
-	//LED_init();
-				
-	SetSysClockTo168();
-		
-	SystemCoreClockUpdate();
-		
+	RCC_ClocksTypeDef RCC_Clocks1;						
+	SetSysClockTo168();		
+	SystemCoreClockUpdate();		
 	SysTick_Config(SystemCoreClock/1000);
-	
+	RCC_GetClocksFreq(&RCC_Clocks1);
 	//timer_ini();
 	//usart_ini();
-	
-	DAC_ini();
-	ADC_ini();
-						
-	RCC_GetClocksFreq(&RCC_Clocks1);
+	LED_init();
+//	DAC_ini();
+//	ADC_ini();	
 		
-	lab10_Test_ini(variant_num);
+	//Lab12_Test_ini();
 		
 	while(1) {
-		
-		//delay_ms(10000);
-		
-		if(Flag) {
-			Flag = 0;
-			
-			max_mv();
-			min_mv();
-			period_ms();
-		}
+		switch(cnt/4) {
+				case 1:
+					OFF_All_LEDs
+					Green_ON						
+					break;
+							
+				case 2:
+					OFF_All_LEDs
+					Yellow_ON
+					break;
+							
+				case 3:
+					OFF_All_LEDs
+					Red_ON
+					break;							
+				
+				case 4:
+					OFF_All_LEDs
+					Blue_ON
+					break;				
+			}
 						
-		Test = check_result(min, max, period);
+		//Test = lab12_main();
 		}	
 	}
 
 	
 void SysTick_Handler(void) {
-	//Считываем данные
-	ADC_SoftwareStartConv(ADC1);
-	count++;
-		
-//	if((i += 35) > 9000) i = 2000;	//все значения увеличены в 10 раз, чтобы уйти от дробной части в формуле ниже
-//	DAC_SetChannel1Data(DAC_Align_12b_R, (uint16_t)((i * 4095 + 15000)/30000));	
-		
-	if(SysTick_CNT) { if(--SysTick_CNT == 0) Flag = 1; }
+
+	if(SysTick_CNT) if(--SysTick_CNT == 0) Flag = 1;	
 	
-	lab10_systick();
+	// Опрос кнопки
+	if(--Button_Count == 0) {
+	  uint8_t new_state_A = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
+	  
+		Button_Count = 10;
+		
+		if(new_state_A != Button_State) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+			if(new_state_A == Bit_SET) Button_Press = 1;
+
+			Button_State = new_state_A;	//Приравниваем текущее состояние предыдущему		
+		}
+	}
 	
-	//if (delay_count > 0) delay_count--;
+	if(--Button_Count == 0) {
+	  uint8_t new_state_B = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_10);
+	  
+		Button_Count = 10;
+		
+		if(new_state != Button_State) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+			if(new_state == Bit_SET) Button_Press = 1;
+
+			Button_State = new_state;	//Приравниваем текущее состояние предыдущему		
+		}
+	}
+			
+	//Анализ энкодера
+//	if(Flag){
+//		Flag = 0;
+//		new_state_A = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_9);
+//	  new_state_B = GPIO_ReadInputDataBit(GPIOE, GPIO_Pin_10);
+//		SysTick_CNT = 5;
+//	}
+	
+	switch(M) {
+		case 0:
+			if(new_state_A != enc_a) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+				enc_a = new_state_A;	//Приравниваем текущее состояние предыдущему		
+				count_a--;
+//				if(cnt > 4) {
+//						cnt--;
+//				}else cnt = 20;
+			}else {				
+				if(new_state_B != enc_b) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+					enc_b = new_state_B;	//Приравниваем текущее состояние предыдущему
+					count_b++;
+//					if(cnt < 20) {
+//							cnt++;
+//					}else cnt = 4;		
+				}
+			}			
+			M = 1;
+			break;			
+			
+		case 1:			
+				if(new_state_A != enc_a) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+					enc_a = new_state_A;	//Приравниваем текущее состояние предыдущему	
+					count_a++;
+//					if(cnt < 20) {
+//							cnt++;
+//					}else cnt = 4;					
+				}else {
+					if(new_state_B != enc_b) { //Если текущее состояние не совпадает с предыдущим, то проваливаемся дальше
+						enc_b = new_state_B;	//Приравниваем текущее состояние предыдущему
+						count_b--;
+//						if(cnt > 4) {
+//								cnt--;
+//						}else cnt = 20;					
+					}
+				}			
+			M = 0;
+			break;		
+	}
+	//lab12_systick();
 }
 
 
