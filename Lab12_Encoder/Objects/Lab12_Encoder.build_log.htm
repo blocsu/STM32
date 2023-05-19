@@ -5,7 +5,7 @@
 <h2>Tool Versions:</h2>
 IDE-Version: µVision V5.38.0.0
 Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: Evgeny Dotsenko, home, LIC=----
+License Information: Evgeny Dotsenko, Home, LIC=----
  
 Tool Versions:
 Toolchain:       MDK-Lite  Version: 5.38.0.0
@@ -21,13 +21,12 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
 Dialog DLL:      TCM.DLL V1.56.4.0
  
 <h2>Project:</h2>
-D:\MK\STM32\Lab12_Encoder\Lab12_Encoder.uvprojx
+C:\MK\STM32\Lab12_Encoder\Lab12_Encoder.uvprojx
 Project File Date:  05/17/2023
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'Target 1'
-compiling main.c...
 User/main.c(1): warning: In file included from...
 ./User/main.h(4): warning: In file included from...
 ./Pl\stm32f4xx.h(15): warning: invalid UTF-8 in comment [-Winvalid-utf8]
@@ -615,6 +614,7 @@ User/main.c(1): warning: In file included from...
 ./User/LED_init.h(19): warning: invalid UTF-8 in comment [-Winvalid-utf8]
 #define Blue_OFF GPIO_ResetBits(GPIOD, GPIO_Pin_15); //<F3><F1><F2><E0><ED><E0><E2><EB><E8><E2><E0><E5><EC> <ED><E8><E7><EA><E8><E9> <F3><F0><EE><E2><E5><ED><FC> <ED><E0><EF><F0><FF><E6><E5><ED><E8><FF> 0 <ED><E0> <ED><EE><E6><EA><E5> <F1><E2><E5><F2><EE><E4><E8><EE><E4><E0> PD15
                                                                                                                                                                                                                                            ^
+<<<<<<< HEAD
 User/main.c(5): warning: no previous extern declaration for non-static variable 'new_state_A' [-Wmissing-variable-declarations]
 uint8_t new_state_A = 1;
         ^
@@ -676,6 +676,61 @@ static uint32_t Test;
 linking...
 Program Size: Code=3036 RO-data=456 RW-data=12 ZI-data=1640  
 ".\Objects\Lab12_Encoder.axf" - 0 Error(s), 161 Warning(s).
+=======
+User/main.c(29): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Red_ON;
+                              ^
+User/main.c(30): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Blue_OFF;
+                                ^
+User/main.c(31): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Green_OFF;
+                                 ^
+User/main.c(32): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Yellow_OFF;
+                                  ^
+User/main.c(34): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Red_OFF;
+                               ^
+User/main.c(35): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Blue_ON;
+                               ^
+User/main.c(36): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Green_OFF;
+                                 ^
+User/main.c(37): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Yellow_OFF;
+                                  ^
+User/main.c(39): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Red_OFF;
+                               ^
+User/main.c(40): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Blue_OFF;
+                                ^
+User/main.c(41): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Green_ON;
+                                ^
+User/main.c(42): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Yellow_OFF;
+                                  ^
+User/main.c(44): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Red_OFF;
+                               ^
+User/main.c(45): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Blue_OFF;
+                                ^
+User/main.c(46): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Green_OFF;
+                                 ^
+User/main.c(47): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        Yellow_ON;
+                                 ^
+167 warnings generated.
+compiling main.c...
+linking...
+Program Size: Code=4620 RO-data=456 RW-data=24 ZI-data=1656  
+".\Objects\Lab12_Encoder.axf" - 0 Error(s), 167 Warning(s).
+>>>>>>> main
 
 <h2>Software Packages used:</h2>
 
@@ -693,20 +748,25 @@ Package Vendor: Keil
 
 <h2>Collection of Component include folders:</h2>
   ./RTE/_Target_1
-  C:/Users/Evgen/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
-  C:/Users/Evgen/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  C:/Users/Admin/AppData/Local/Arm/Packs/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
 
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
    * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
       Source file:   MDK/Device/Source/ARM/STM32F40xxx_41xxx_OPT.s
       Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
-      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f407xx.s
+<<<<<<< HEAD
       Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
 Build Time Elapsed:  00:00:01
+=======
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+Build Time Elapsed:  00:00:02
+>>>>>>> main
 </pre>
 </body>
 </html>
