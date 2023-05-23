@@ -94,8 +94,11 @@ Section Cross References
     button.o(.text.Button_Read) refers to button.o(.bss.Button_State) for Button_State
     button.o(.text.Button_Read) refers to button.o(.bss.Button_Press) for Button_Press
     button.o(.ARM.exidx.text.Button_Read) refers to button.o(.text.Button_Read) for [Anonymous Symbol]
-    button.o(.text.get_Button_Press) refers to button.o(.bss.Button_Press) for Button_Press
-    button.o(.ARM.exidx.text.get_Button_Press) refers to button.o(.text.get_Button_Press) for [Anonymous Symbol]
+    button.o(.text.Button_Gist) refers to stm32f4xx_gpio.o(.text.GPIO_ReadInputDataBit) for GPIO_ReadInputDataBit
+    button.o(.text.Button_Gist) refers to button.o(.bss.Button_Count) for Button_Count
+    button.o(.text.Button_Gist) refers to button.o(.bss.Button_State) for Button_State
+    button.o(.text.Button_Gist) refers to button.o(.bss.Button_Press) for Button_Press
+    button.o(.ARM.exidx.text.Button_Gist) refers to button.o(.text.Button_Gist) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_PriorityGroupConfig) refers to misc.o(.text.NVIC_PriorityGroupConfig) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_Init) refers to misc.o(.text.NVIC_Init) for [Anonymous Symbol]
     misc.o(.ARM.exidx.text.NVIC_SetVectorTable) refers to misc.o(.text.NVIC_SetVectorTable) for [Anonymous Symbol]
@@ -1224,8 +1227,8 @@ Removing Unused input sections from the image.
     Removing button.o(.ARM.exidx.text.button_ini), (8 bytes).
     Removing button.o(.text.Button_Read), (116 bytes).
     Removing button.o(.ARM.exidx.text.Button_Read), (8 bytes).
-    Removing button.o(.text.get_Button_Press), (12 bytes).
-    Removing button.o(.ARM.exidx.text.get_Button_Press), (8 bytes).
+    Removing button.o(.text.Button_Gist), (160 bytes).
+    Removing button.o(.ARM.exidx.text.Button_Gist), (8 bytes).
     Removing button.o(.bss.Button_State), (1 bytes).
     Removing button.o(.bss.Button_Count), (1 bytes).
     Removing button.o(.bss.Button_Press), (1 bytes).
@@ -2669,7 +2672,7 @@ Removing Unused input sections from the image.
     Removing lab5_test.o(.rev16_text), (4 bytes).
     Removing lab5_test.o(.revsh_text), (4 bytes).
 
-1492 unused section(s) (total 64979 bytes) removed from the image.
+1492 unused section(s) (total 65127 bytes) removed from the image.
 
 ==============================================================================
 

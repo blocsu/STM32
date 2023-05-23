@@ -106,25 +106,20 @@ void SysTick_Handler(void) {
 		}else if(Button_State == 1) Button_State = 0;
 	}
 	
-//	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0))
-//	{
-//		if (Button_Count < 5)
-//		{
+//	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0))	{
+//		if (Button_Count < 5)	{
 //			Button_Count++;
 //		} else {
-//			if (Button_State == 0)
-//			{
+//			if (Button_State == 0) {
 //				Button_State=1;
 //				Button_Press = 1;
 //			}
 //		}
 //	} else {
-//		if (Button_Count > 0)
-//		{
+//		if (Button_Count > 0)	{
 //			Button_Count--;
 //		}else{
-//			if (Button_State == 1)
-//			{
+//			if (Button_State == 1)	{
 //				Button_State=0;
 //			}
 //		}
