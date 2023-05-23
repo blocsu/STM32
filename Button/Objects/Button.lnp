@@ -8,6 +8,7 @@
 ".\objects\adc.o"
 ".\objects\encoder.o"
 ".\objects\button.o"
+".\User\Lab5_Test.lib"
 ".\objects\misc.o"
 ".\objects\stm32f4xx_adc.o"
 ".\objects\stm32f4xx_can.o"

@@ -390,11 +390,6 @@
               <FilePath>.\User\main.c</FilePath>
             </File>
             <File>
-              <FileName>main.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\User\main.h</FilePath>
-            </File>
-            <File>
               <FileName>init.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\User\init.c</FilePath>
@@ -453,6 +448,16 @@
               <FileName>button.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\User\button.h</FilePath>
+            </File>
+            <File>
+              <FileName>Lab5_Test.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\User\Lab5_Test.h</FilePath>
+            </File>
+            <File>
+              <FileName>Lab5_Test.lib</FileName>
+              <FileType>4</FileType>
+              <FilePath>.\User\Lab5_Test.lib</FilePath>
             </File>
           </Files>
         </Group>

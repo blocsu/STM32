@@ -17,15 +17,19 @@ void button_ini(void) {
 
 uint8_t Button_State = 0;
 uint8_t Button_Count = 0;
-uint8_t Button_Flag = 0;
+uint8_t Button_Press = 0;
 
 void Button_Read(void) {
 	if(--Button_Count == 0) {
 		Button_Count = 10;
 		uint8_t new_state = GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0);
-		if(new_state != Button_State) {
-			if(new_state == Bit_SET) Button_Flag = 1;
-			Button_State = new_state;			
+		if(new_state) {
+			if(new_state != Button_State) Button_Press = 1;						
 		}
-	}
+		Button_State = new_state;
+	}	
 } 
+
+uint8_t get_Button_Press(void) {
+	return Button_Press;
+}

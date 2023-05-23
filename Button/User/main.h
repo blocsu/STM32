@@ -11,6 +11,7 @@
 #include "encoder.h"
 #include "stdio.h"
 #include "button.h"
+#include "Lab5_Test.h"
 
 static uint16_t delay_count=0;
 
