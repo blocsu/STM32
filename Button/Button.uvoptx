@@ -163,7 +163,7 @@
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Button_Count,0x0A</ItemText>
+          <ItemText>Button_Count,0x10</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
