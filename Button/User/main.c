@@ -103,7 +103,7 @@ void SysTick_Handler(void) {
 	}else {
 		if(Button_Count > 0) {
 			Button_Count--;
-		}else if(Button_State == 1) Button_State = 0;
+		}else if(Button_State == 1) {Button_State = 0; Button_Press = 0;}
 	}
 	
 //	if (GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0))	{

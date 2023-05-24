@@ -30,7 +30,7 @@ void Button_Read(void) {
 	}	
 } 
 
-void Button_Gist(void) {
+void Buttons_Filter(void) {
 	if(GPIO_ReadInputDataBit(GPIOA, GPIO_Pin_0)) {
 		if(Button_Count < 5) {
 			Button_Count++;
@@ -38,6 +38,6 @@ void Button_Gist(void) {
 	}else {
 		if(Button_Count > 0) {
 			Button_Count--;
-		}else if(Button_State == 1) Button_State = 0;
+		}else if(Button_State == 1) {Button_State = 0; Button_Press = 0;}
 	}
 }

@@ -4,6 +4,7 @@
 #include "timers.h"
 #include "Lab6_Test.h"
 
+void TIM3_IRQHandler(void);
 void TIM3_IRQHandler(void) 
 {
 	if (TIM_GetITStatus(TIM3, TIM_IT_Update) == SET)
